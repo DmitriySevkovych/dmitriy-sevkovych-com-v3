@@ -1,7 +1,7 @@
-export default function Home() {
+export default function CV() {
     return (
         <section>
-            Hello
+            CV page
         </section>
     )
 }
