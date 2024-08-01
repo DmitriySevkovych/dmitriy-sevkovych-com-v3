@@ -1,5 +1,5 @@
 import { BlogPost } from '@/model/blogpost'
-import { POSTS_DIR } from '@/model/constants'
+import { POSTS_DIR, toSlug } from '@/model/helpers'
 import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
@@ -37,7 +37,7 @@ export const getStaticProps = async () => {
 
         return {
             frontMatter,
-            slug: filename.split('.')[0],
+            slug: toSlug(filename),
         }
     })
 

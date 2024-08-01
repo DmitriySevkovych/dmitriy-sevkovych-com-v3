@@ -1,5 +1,5 @@
 import { BlogPost } from '@/model/blogpost'
-import { POSTS_DIR } from '@/model/constants'
+import { POSTS_DIR, toMdx, toSlug } from '@/model/helpers'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { GetStaticProps } from 'next'
@@ -33,7 +33,7 @@ export const getStaticPaths = async () => {
 
     const paths = files.map((filename) => ({
         params: {
-            slug: filename.replace('.mdx', ''),
+            slug: toSlug(filename),
         },
     }))
 
@@ -49,7 +49,7 @@ interface Params extends ParsedUrlQuery {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { slug } = params as Params
-    const postFile = path.join(POSTS_DIR, slug + '.mdx')
+    const postFile = path.join(POSTS_DIR, toMdx(slug))
     const markdownWithMeta = fs.readFileSync(postFile, 'utf-8')
 
     const { data: frontMatter, content } = matter(markdownWithMeta)
