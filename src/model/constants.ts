@@ -1,3 +1,3 @@
-import path from "path"
+import path from 'path'
 
-export const POSTS_DIR = path.join('src','posts')
+export const POSTS_DIR = path.join('src', 'posts')
