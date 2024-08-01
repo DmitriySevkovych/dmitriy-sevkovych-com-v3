@@ -1,5 +1,5 @@
+import { POSTS_DIR, toSlug } from '@/lib/utils'
 import { BlogPost } from '@/model/blogpost'
-import { POSTS_DIR, toSlug } from '@/model/helpers'
 import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'

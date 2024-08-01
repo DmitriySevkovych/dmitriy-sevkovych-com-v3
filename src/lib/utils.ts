@@ -1,4 +1,10 @@
+import { type ClassValue, clsx } from 'clsx'
 import path from 'path'
+import { twMerge } from 'tailwind-merge'
+
+export const cn = (...inputs: ClassValue[]) => {
+    return twMerge(clsx(inputs))
+}
 
 export const POSTS_DIR = path.join('src', 'posts')
 

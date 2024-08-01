@@ -1,5 +1,5 @@
+import { POSTS_DIR, toMdx, toSlug } from '@/lib/utils'
 import { BlogPost } from '@/model/blogpost'
-import { POSTS_DIR, toMdx, toSlug } from '@/model/helpers'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { GetStaticProps } from 'next'
@@ -18,11 +18,14 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
     frontMatter,
     mdxSource,
 }) => {
-    console.log(mdxSource)
-
+    const { title, date } = frontMatter
     return (
-        <div className="mt-4">
-            <h1>{frontMatter.title}</h1>
+        <div>
+            <div>
+                <h1>{title}</h1>
+                <h2>{date.toString()}</h2>
+            </div>
+            <br />
             <MDXRemote {...mdxSource} components={components} />
         </div>
     )
@@ -55,6 +58,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { data: frontMatter, content } = matter(markdownWithMeta)
     const mdxSource = await serialize(content)
 
+    console.log({ mdxSource, content })
     return {
         props: {
             frontMatter,

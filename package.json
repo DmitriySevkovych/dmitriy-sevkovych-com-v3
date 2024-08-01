@@ -13,13 +13,18 @@
         "@mdx-js/loader": "^3.0.1",
         "@mdx-js/react": "^3.0.1",
         "@next/mdx": "^14.2.5",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
         "gray-matter": "^4.0.3",
+        "lucide-react": "^0.419.0",
         "marked": "^13.0.3",
         "next": "^14.2.5",
         "next-mdx-remote": "^5.0.0",
         "react": "^18",
         "react-dom": "^18",
-        "react-syntax-highlighter": "^15.5.0"
+        "react-syntax-highlighter": "^15.5.0",
+        "tailwind-merge": "^2.4.0",
+        "tailwindcss-animate": "^1.0.7"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.3.0",
