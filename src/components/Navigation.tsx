@@ -4,8 +4,8 @@ import React from 'react'
 const Navigation = () => {
   return (
     <div className='w-full flex gap-4'>
-        <div className='text-xl'>Dmitriy&apos;s Website</div>
-        <Link href="/">Blog</Link>
+        <Link href="/" className='text-xl'>Dmitriy&apos;s Website</Link>
+        <Link href="/blog">Blog</Link>
         <Link href="/cv">My CV</Link>
     </div>
   )

@@ -1,7 +1,7 @@
 export default function Home() {
     return (
         <section>
-            Hello
+            Hello, Landing page under construction
         </section>
     )
 }
