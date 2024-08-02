@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge'
 /*
  * Constants
  */
-export const POSTS_DIR = path.join('src', 'posts')
+export const POSTS_DIR = path.join(process.cwd(), 'src', 'posts')
 
 /*
  * Helper functions
