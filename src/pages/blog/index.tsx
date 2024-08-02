@@ -1,3 +1,4 @@
+import BlogPostPreview from '@/components/BlogPostPreview'
 import {
     Card,
     CardContent,
@@ -73,33 +74,11 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                     </Link>
                 </p>
 
-                {posts.map((post) => {
-                    const { title, date, tags, abstract } = post.frontMatter
-                    return (
-                        <Link
-                            href={`/blog/${post.slug}`}
-                            passHref
-                            key={post.slug}
-                        >
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle>{title}</CardTitle>
-                                    <CardDescription>
-                                        {date.toLocaleString()}
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p>{abstract}</p>
-                                </CardContent>
-                                <CardFooter>
-                                    {tags?.map((tag, index) => (
-                                        <p key={index}>{tag}</p>
-                                    ))}
-                                </CardFooter>
-                            </Card>
-                        </Link>
-                    )
-                })}
+                <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                    {posts.map((post) => (
+                        <BlogPostPreview post={post} key={post.slug} />
+                    ))}
+                </div>
             </div>
         </section>
     )
