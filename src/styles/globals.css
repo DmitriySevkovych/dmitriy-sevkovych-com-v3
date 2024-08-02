@@ -1,18 +1,4 @@
 @tailwind base;
-
-h1 {
-    @apply text-2xl;
-}
-h2 {
-    @apply text-xl;
-}
-h3 {
-    @apply text-lg;
-}
-/* a {
-  @apply text-orange-500;
-} */
-
 @tailwind components;
 @tailwind utilities;
 
@@ -30,7 +16,7 @@ h3 {
         --secondary-foreground: 222.2 47.4% 11.2%;
         --muted: 210 40% 96.1%;
         --muted-foreground: 215.4 16.3% 46.9%;
-        --accent: 210 40% 96.1%;
+        --accent: 27 87% 50%;
         --accent-foreground: 222.2 47.4% 11.2%;
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 210 40% 98%;
@@ -79,5 +65,17 @@ h3 {
     }
     body {
         @apply bg-background text-foreground;
+    }
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    h3 {
+        @apply text-lg;
+    }
+    a {
+        @apply text-accent;
     }
 }

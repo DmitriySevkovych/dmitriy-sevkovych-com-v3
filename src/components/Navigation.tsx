@@ -3,12 +3,16 @@ import React from 'react'
 
 const Navigation = () => {
     return (
-        <div className="flex w-full gap-4">
-            <Link href="/" className="text-xl">
+        <div className="flex w-full gap-4 align-bottom">
+            <Link href="/" className="text-xl text-foreground">
                 Dmitriy&apos;s Website
             </Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/cv">My CV</Link>
+            <Link href="/blog" className="text-foreground">
+                Blog
+            </Link>
+            <Link href="/cv" className="text-foreground">
+                Curriculum Vitae
+            </Link>
         </div>
     )
 }

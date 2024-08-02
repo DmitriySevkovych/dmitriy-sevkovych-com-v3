@@ -69,7 +69,10 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                     In case you&apos;ve come this far: have fun browsing through
                     my latest posts! Or if you want to start at the beginning,
                     here is{' '}
-                    <Link href="/blog/2024-07-06-about_me">
+                    <Link
+                        href="/blog/2024-07-06-about_me"
+                        className="text-accent"
+                    >
                         my background story as I perceive it.
                     </Link>
                 </p>

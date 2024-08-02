@@ -22,7 +22,7 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
 
     return (
         <Link href={`/blog/${post.slug}`} passHref>
-            <Card>
+            <Card className="transition-colors hover:bg-secondary">
                 <CardHeader>
                     <CardTitle>{title}</CardTitle>
                     <CardDescription>{date.toLocaleString()}</CardDescription>
