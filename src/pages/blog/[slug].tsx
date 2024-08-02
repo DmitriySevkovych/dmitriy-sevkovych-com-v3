@@ -58,7 +58,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { data: frontMatter, content } = matter(markdownWithMeta)
     const mdxSource = await serialize(content)
 
-    console.log({ mdxSource, content })
     return {
         props: {
             frontMatter,
