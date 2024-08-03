@@ -1,8 +1,8 @@
 import { BlogPost } from '@/model/blogpost'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+import ReadDurationIndicator from './ReadDurationIndicator'
 import { Badge } from './ui/badge'
 import {
     Card,
@@ -18,7 +18,7 @@ type BlogPostPreviewProps = {
 }
 
 const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
-    const { title, date, tags, abstract } = post.frontMatter
+    const { title, date, tags, abstract, language, length } = post.frontMatter
 
     return (
         <Link href={`/blog/${post.slug}`} passHref>
@@ -30,10 +30,14 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
                 <CardContent className="text-center">
                     <p>{abstract}</p>
                 </CardContent>
-                <CardFooter className="flex justify-end gap-2">
-                    {tags?.map((tag, index) => (
-                        <Badge key={index}>{tag}</Badge>
-                    ))}
+                <CardFooter className="flex justify-between">
+                    <ReadDurationIndicator length={length} />
+
+                    <div className="flex gap-2">
+                        {tags?.map((tag, index) => (
+                            <Badge key={index}>{tag}</Badge>
+                        ))}
+                    </div>
                 </CardFooter>
             </Card>
         </Link>
