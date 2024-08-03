@@ -16,10 +16,13 @@ type ReadDurationIndicatorProps = {
 const ReadDurationIndicator: React.FC<ReadDurationIndicatorProps> = ({
     length,
 }) => {
-    const activeHourglass = <Hourglass size={20} strokeWidth={1.2} />
-    const inactiveHourglass = (
-        <Hourglass size={20} strokeWidth={1.2} stroke="#ccc" />
-    )
+    const iconConfig = {
+        size: 20,
+        strokeWidth: 1.2,
+    }
+
+    const activeHourglass = <Hourglass {...iconConfig} />
+    const inactiveHourglass = <Hourglass {...iconConfig} stroke="#ccc" />
 
     return (
         <TooltipProvider>
