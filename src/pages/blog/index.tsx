@@ -66,9 +66,9 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                 </p>
 
                 <p>
-                    In case you&apos;ve come this far: have fun browsing through
+                    In case you&apos;ve come this far, have fun browsing through
                     my latest posts! Or if you want to start at the beginning,
-                    here is{' '}
+                    check out{' '}
                     <Link
                         href="/blog/2024-07-06-about_me"
                         className="text-accent"
@@ -77,7 +77,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                     </Link>
                 </p>
 
-                <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+                <div className="mt-3 grid grid-cols-1 gap-5 lg:grid-cols-2">
                     {posts.map((post) => (
                         <BlogPostPreview post={post} key={post.slug} />
                     ))}
