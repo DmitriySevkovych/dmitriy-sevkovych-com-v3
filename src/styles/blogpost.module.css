@@ -1,0 +1,7 @@
+.mdxContainer > h2 {
+    @apply mb-4 mt-9;
+}
+
+.mdxContainer > p {
+    @apply mb-4 leading-relaxed;
+}

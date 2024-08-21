@@ -1,4 +1,4 @@
-import { POSTS_DIR, toMdx, toSlug } from '@/lib/utils'
+import { POSTS_DIR, cn, toMdx, toSlug } from '@/lib/utils'
 import { BlogPost } from '@/model/blogpost'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -9,6 +9,8 @@ import path from 'path'
 import { ParsedUrlQuery } from 'querystring'
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
+
+import styles from '../../styles/blogpost.module.css'
 
 type BlogPostPageProps = Required<BlogPost>
 
@@ -26,7 +28,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
                 <h3>{date.toString()}</h3>
             </div>
             <br />
-            <div className="w-full max-w-4xl">
+            <div className={cn(styles.mdxContainer, 'w-full max-w-4xl')}>
                 <MDXRemote {...mdxSource} components={components} />
             </div>
         </div>
