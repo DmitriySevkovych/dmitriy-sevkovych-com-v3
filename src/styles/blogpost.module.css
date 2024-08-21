@@ -1,7 +1,19 @@
+.mdxContainer {
+    @apply py-12 leading-relaxed;
+}
+
 .mdxContainer > h2 {
     @apply mb-4 mt-9;
 }
 
 .mdxContainer > p {
-    @apply mb-4 leading-relaxed;
+    @apply mb-4;
+}
+
+.mdxContainer > ul {
+    @apply list-disc px-12;
+}
+
+.mdxContainer > ul li {
+    @apply mb-1;
 }
