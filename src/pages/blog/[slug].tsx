@@ -20,13 +20,15 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
 }) => {
     const { title, date } = frontMatter
     return (
-        <div>
-            <div>
+        <div className="flex w-full flex-col items-center">
+            <div className="w-full text-center">
                 <h1>{title}</h1>
-                <h2>{date.toString()}</h2>
+                <h3>{date.toString()}</h3>
             </div>
             <br />
-            <MDXRemote {...mdxSource} components={components} />
+            <div className="w-full max-w-4xl">
+                <MDXRemote {...mdxSource} components={components} />
+            </div>
         </div>
     )
 }
