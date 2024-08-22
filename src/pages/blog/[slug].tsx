@@ -1,4 +1,5 @@
 import { ConstrainedWidthDiv } from '@/components/Layouts'
+import { ResourcesSection } from '@/components/Resources'
 import { POSTS_DIR, cn, toMdx, toSlug } from '@/lib/utils'
 import { BlogPost } from '@/model/blogpost'
 import fs from 'fs'
@@ -21,16 +22,22 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
     frontMatter,
     mdxSource,
 }) => {
-    const { title, date } = frontMatter
+    const { title, date, resources } = frontMatter
     return (
         <div className="flex w-full flex-col items-center">
             <div className="w-full text-center">
                 <h1>{title}</h1>
                 <h3>{date.toString()}</h3>
             </div>
-            <ConstrainedWidthDiv className={styles.mdxContainer}>
+
+            <ConstrainedWidthDiv
+                className={styles.mdxContainer}
+                withSeparator={!!resources}
+            >
                 <MDXRemote {...mdxSource} components={components} />
             </ConstrainedWidthDiv>
+
+            {resources && <ResourcesSection resources={resources} />}
         </div>
     )
 }

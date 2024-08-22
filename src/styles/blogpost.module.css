@@ -1,5 +1,5 @@
 .mdxContainer {
-    @apply py-12 leading-relaxed;
+    @apply pb-8 pt-10 leading-relaxed;
 }
 
 .mdxContainer > h2 {

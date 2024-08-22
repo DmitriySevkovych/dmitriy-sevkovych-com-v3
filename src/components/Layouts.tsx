@@ -1,12 +1,22 @@
 import { cn } from '@/lib/utils'
-import React, { ReactNode } from 'react'
+import React from 'react'
+
+import { Separator } from './ui/separator'
 
 interface ConstrainedWidthDivProps
-    extends React.HTMLAttributes<HTMLDivElement> {}
+    extends React.HTMLAttributes<HTMLDivElement> {
+    withSeparator?: boolean
+}
 
 export const ConstrainedWidthDiv: React.FC<ConstrainedWidthDivProps> = ({
     className,
     children,
+    withSeparator,
 }) => {
-    return <div className={cn('w-full max-w-4xl', className)}>{children}</div>
+    return (
+        <div className={cn('w-full max-w-4xl', className)}>
+            {children}
+            {withSeparator && <Separator className="mt-6" />}
+        </div>
+    )
 }
