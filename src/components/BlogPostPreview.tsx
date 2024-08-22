@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import ReadDurationIndicator from './ReadDurationIndicator'
+import Tag from './Tag'
 import { Badge } from './ui/badge'
 import {
     Card,
@@ -36,7 +37,7 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
                 <CardFooter>
                     <div className="flex gap-2">
                         {tags?.map((tag, index) => (
-                            <Badge key={index}>{tag}</Badge>
+                            <Tag key={index} tag={tag} />
                         ))}
                     </div>
                 </CardFooter>
