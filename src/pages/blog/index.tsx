@@ -1,12 +1,5 @@
 import BlogPostPreview from '@/components/BlogPostPreview'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card'
+import { ConstrainedWidthDiv } from '@/components/Layouts'
 import { POSTS_DIR, toSlug } from '@/lib/utils'
 import { BlogPost } from '@/model/blogpost'
 import fs from 'fs'
@@ -20,8 +13,8 @@ type BlogPageProps = {
 
 const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
     return (
-        <section>
-            <div className="flex flex-col gap-5">
+        <section className="flex justify-center">
+            <ConstrainedWidthDiv className="flex max-w-6xl flex-col gap-5">
                 <blockquote className="m-6 border-l-2 pl-6 italic">
                     &quot;If you are thinking without writing, you only think
                     that you are thinking&quot;
@@ -29,7 +22,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                     <span>- Leslie Lamport</span>
                 </blockquote>
 
-                <div className="flex w-full max-w-6xl flex-col gap-5 self-center">
+                <ConstrainedWidthDiv className="flex flex-col gap-5 self-center">
                     <p className="leading-relaxed">
                         This is my digital notebook. Why exactly does it exist
                         and what is it about? I guess this is both an arena of
@@ -72,14 +65,14 @@ const BlogPage: React.FC<BlogPageProps> = ({ posts }) => {
                             my background story as I perceive it.
                         </Link>
                     </p>
-                </div>
+                </ConstrainedWidthDiv>
 
                 <div className="mt-3 grid grid-cols-1 gap-5 lg:grid-cols-2">
                     {posts.map((post) => (
                         <BlogPostPreview post={post} key={post.slug} />
                     ))}
                 </div>
-            </div>
+            </ConstrainedWidthDiv>
         </section>
     )
 }

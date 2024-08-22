@@ -1,3 +1,4 @@
+import { ConstrainedWidthDiv } from '@/components/Layouts'
 import { POSTS_DIR, cn, toMdx, toSlug } from '@/lib/utils'
 import { BlogPost } from '@/model/blogpost'
 import fs from 'fs'
@@ -27,10 +28,9 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
                 <h1>{title}</h1>
                 <h3>{date.toString()}</h3>
             </div>
-            <br />
-            <div className={cn(styles.mdxContainer, 'w-full max-w-4xl')}>
+            <ConstrainedWidthDiv className={styles.mdxContainer}>
                 <MDXRemote {...mdxSource} components={components} />
-            </div>
+            </ConstrainedWidthDiv>
         </div>
     )
 }
