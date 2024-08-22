@@ -25,14 +25,15 @@ const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
             <Card className="transition-colors hover:bg-secondary">
                 <CardHeader>
                     <CardTitle>{title}</CardTitle>
-                    <CardDescription>{date.toLocaleString()}</CardDescription>
+                    <CardDescription className="flex justify-between">
+                        {date.toLocaleString()}
+                        <ReadDurationIndicator length={length} />
+                    </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                     <p>{abstract}</p>
                 </CardContent>
-                <CardFooter className="flex justify-between">
-                    <ReadDurationIndicator length={length} />
-
+                <CardFooter>
                     <div className="flex gap-2">
                         {tags?.map((tag, index) => (
                             <Badge key={index}>{tag}</Badge>
