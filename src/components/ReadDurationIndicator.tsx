@@ -17,7 +17,7 @@ const ReadDurationIndicator: React.FC<ReadDurationIndicatorProps> = ({
     length,
 }) => {
     const iconConfig = {
-        size: 20,
+        size: 18,
         strokeWidth: 1.2,
     }
 
