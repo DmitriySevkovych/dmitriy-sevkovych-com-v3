@@ -17,6 +17,8 @@ export type BlogPostFrontMatter = {
     language: BlogPostLanguage
     tags?: string[]
     resources?: BlogPostResource[]
+    similarPosts?: BlogPostResource[]
+    isSeries?: boolean
 }
 
 export type BlogPost = {
