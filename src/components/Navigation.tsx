@@ -1,17 +1,25 @@
 import Link from 'next/link'
-import React from 'react'
 
 const Navigation = () => {
     return (
-        <div className="flex w-full gap-4 align-bottom">
-            <Link href="/" className="text-xl text-foreground">
+        <div className="mb-8 flex w-full items-baseline gap-4 lg:gap-6">
+            <Link
+                href="/"
+                className="text-xl text-foreground transition-colors hover:text-accent"
+            >
                 Dmitriy&apos;s Website
             </Link>
-            <Link href="/blog" className="text-foreground">
+            <Link
+                href="/blog"
+                className="text-foreground transition-colors hover:text-accent"
+            >
                 Blog
             </Link>
-            <Link href="/cv" className="text-foreground">
-                Curriculum Vitae
+            <Link
+                href="/cv"
+                className="text-foreground transition-colors hover:text-accent"
+            >
+                CV
             </Link>
         </div>
     )
