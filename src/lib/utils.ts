@@ -8,6 +8,13 @@ import { twMerge } from 'tailwind-merge'
 export const POSTS_DIR = path.join(process.cwd(), 'src', 'posts')
 
 /*
+ * Helper types
+ */
+// Cf. https://pawelgrzybek.com/make-the-typescript-interface-partially-optional-required/
+export type PartiallyRequired<T, K extends keyof T> = Omit<T, K> &
+    Required<Pick<T, K>>
+
+/*
  * Helper functions
  */
 // For shadcn/ui and in general tailwind

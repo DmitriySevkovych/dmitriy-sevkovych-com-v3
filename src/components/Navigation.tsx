@@ -1,19 +1,30 @@
-import { cn } from '@/lib/utils'
+'use client'
+
+import { PartiallyRequired, cn } from '@/lib/utils'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
-interface NavigationItemProps extends React.HTMLProps<HTMLAnchorElement> {}
+type NavigationItemProps = PartiallyRequired<
+    React.HTMLProps<HTMLAnchorElement>,
+    'href'
+>
 
 const NavigationItem: React.FC<NavigationItemProps> = ({
     className,
     children,
     href,
 }) => {
+    const router = useRouter()
+    const path = router.pathname
+
+    const highlight = path === href && path !== '/'
     return (
         <Link
             href={href as string}
             className={cn(
                 'text-foreground transition-colors hover:text-accent',
+                highlight ? 'border-b border-accent' : '',
                 className
             )}
         >
