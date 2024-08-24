@@ -24,7 +24,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
 }) => {
     const { title, date, resources, similarPosts, isSeries } = frontMatter
     return (
-        <div className="flex w-full flex-col items-center">
+        <section className="flex w-full flex-col items-center">
             <div className="w-full text-center">
                 <h1>{title}</h1>
                 <h3>{date.toString()}</h3>
@@ -47,7 +47,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({
                     isSeries={isSeries}
                 />
             )}
-        </div>
+        </section>
     )
 }
 
