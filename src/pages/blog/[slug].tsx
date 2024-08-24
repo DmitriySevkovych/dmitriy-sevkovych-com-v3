@@ -1,7 +1,8 @@
 import { ConstrainedWidthDiv } from '@/components/Layouts'
 import { ResourcesSection, SimilarPostsSection } from '@/components/Resources'
-import { POSTS_DIR, cn, toMdx, toSlug } from '@/lib/utils'
+import { POSTS_DIR, toMdx, toSlug } from '@/lib/utils'
 import { BlogPost } from '@/model/blogpost'
+import styles from '@/styles/blogpost.module.css'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { GetStaticProps } from 'next'
@@ -11,8 +12,6 @@ import path from 'path'
 import { ParsedUrlQuery } from 'querystring'
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-
-import styles from '../../styles/blogpost.module.css'
 
 type BlogPostPageProps = Required<BlogPost>
 
