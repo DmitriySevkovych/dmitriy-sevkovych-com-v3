@@ -1,0 +1,36 @@
+{
+    "date_from": "06.2019",
+    "title": "Website icebaby.de",
+    "subtitle": "2 days, remote",
+    "classes": "print_not is_collapsed",
+    "blocks": [
+        {
+            "image": "icon_sass",
+            "caption": "SASS",
+            "description": "Creation of a static website for an ice cream parlour. Responsibilities:",
+            "points": [
+                "Website design",
+                "Website development",
+                "Website deployment"
+            ]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_css3",
+            "caption": "CSS3"
+        },
+        {
+            "image": "icon_javascript_bg",
+            "caption": "JavaScript"
+        },
+        {
+            "image": "icon_webpack",
+            "caption": "Webpack"
+        },
+        {
+            "image": "icon_git",
+            "caption": "Git"
+        }
+    ]
+}

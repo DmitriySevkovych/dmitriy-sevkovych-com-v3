@@ -1,0 +1,26 @@
+---
+date_from: "2014-10-01"
+date_until: "2017-04-30"
+title: "M.Sc. Mathematics, University of Stuttgart"
+blocks:
+    [
+        {
+            caption: "Focus",
+            points:
+                [
+                    "Statistical learning theory",
+                    "Differential equations & dynamic systems",
+                ],
+        },
+        { caption "Minor", points: ["Physics"] },
+        {
+            caption: "Thesis",
+            points:
+                [
+                    "'Travelling Waves for a Two-Phase Problem in Compressible Hydrodynamics' - very good",
+                ],
+        },
+        { caption: "Overall grade", points: ["good"] },
+    ]
+---
+

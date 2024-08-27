@@ -1,0 +1,18 @@
+---
+date_from: "2018-09-01"
+date_to: "ongoing"
+client: "Multiple clients"
+title: "Website Developer"
+capacity: "depending on project"
+location: "fully remote"
+blocks: [
+    {
+      description: "Development and deployment of websites and immersive experiences. Responsibilities:",
+      image: "TODO",
+      caption: "TODO",
+      points: ["TODO"],
+    },
+  ]
+techs: ["TODO"]
+---
+

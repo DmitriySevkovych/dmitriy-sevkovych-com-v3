@@ -1,0 +1,35 @@
+---
+date_from: "2023-11-01"
+date_to: "ongoing"
+client: "AWWT GmbH"
+title: "Machine Learning Engineer"
+capacity: "part-time"
+location: "fully remote"
+blocks:
+    [
+        {
+            image: "icon_openai",
+            caption: "OpenAI",
+            description: "Responsible for all backend and AI components of an artwork shopping platform.",
+            points:
+                [
+                    "Multi-modal semantic search",
+                    "Recommender system",
+                    "REST services",
+                    "Data migration",
+                    "Containerization and deployment",
+                    "Monitoring",
+                ],
+        },
+    ]
+techs:
+    [
+        { image: "icon_python", caption: "Python" },
+        { image: "icon_pytorch", caption: "PyTorch" },
+        { image: "icon_typescript_bg", caption: "TypeScript" },
+        { image: "icon_react", caption: "React.js" },
+        { image: "icon_kubernetes", caption: "Kubernetes" },
+        { image: "icon_aws", caption: "AWS" },
+    ]
+---
+

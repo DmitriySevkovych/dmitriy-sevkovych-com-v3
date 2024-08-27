@@ -1,3 +1,4 @@
+import { CVData } from '@/model/cv'
 import { Document, Page, StyleSheet, Text, View } from '@react-pdf/renderer'
 
 // TODO: try to integrate `react-pdf-tailwind` with nextjs
@@ -6,7 +7,9 @@ const styles = StyleSheet.create({
     section: { color: 'white', textAlign: 'center', margin: 30 },
 })
 
-const CV = () => (
+type CVPDFProps = CVData
+
+const CVPDF: React.FC<CVPDFProps> = ({ education, projects }) => (
     <Document>
         <Page size="A4" style={styles.page}>
             <View style={styles.section}>
@@ -19,4 +22,4 @@ const CV = () => (
     </Document>
 )
 
-export default CV
+export default CVPDF

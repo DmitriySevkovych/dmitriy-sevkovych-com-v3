@@ -1,0 +1,19 @@
+---
+date_from: "2010-10-01"
+date_until: "2014-07-31"
+title: "B.Sc. Mathematics, University of Stuttgart"
+blocks:
+    [
+        {
+            caption: "Focus",
+            points: ["Probability theory & statistics", "Numerical analysis"],
+        },
+        { caption: "Minor", points: ["Economics"] },
+        {
+            caption: "Thesis",
+            points: ["'Isotropic Gaussian Fields on a Sphere' - excellent"],
+        },
+        { caption: "Overall grade", points: ["good"] },
+    ]
+---
+

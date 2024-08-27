@@ -1,0 +1,49 @@
+---
+date_from: "2020-12-01"
+date_to: "2022-04-30"
+client: "yourdata GmbH"
+title: "Backend- & DevOps-Engineer"
+capacity: "full-time" 
+location: "fully remote"
+blocks: [
+    {
+        image: "icon_kafka",
+        caption: "Kafka",
+        description: "Building real-time ETL pipelines for heterogenous data with Kafka and Kafka Streams. Responsibilities:",
+        points: [
+            "Improving memory and I/O footprint of the software.",
+            "Fine-tuning Kafka cluster.",
+            "Task automation through shell scripting.",
+            "Support with container orchestration.",
+            "Infrastructure support (on premises and AWS EC2).",
+            "Mentoring junior devs."
+        ]
+    }
+]
+techs: [
+    {
+        image: "icon_java",
+        caption: "Java 8"
+    },
+    {
+        image: "icon_spring",
+        caption: "Spring Boot"
+    },
+    {
+        image: "icon_postgresql",
+        caption: "PostgreSQL"
+    },
+    {
+        image: "icon_docker",
+        caption: "Docker"
+    },
+    {
+        image: "icon_bash",
+        caption: "Bash"
+    },
+    {
+        image: "icon_python",
+        caption: "Python"
+    }
+]
+---

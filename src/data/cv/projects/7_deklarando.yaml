@@ -1,0 +1,32 @@
+---
+date_from: "2022-01-01"
+date_to: "2023-02-28"
+client: "Deklarando"
+title: "Co-Founder, Developer"
+capacity: "part-time"
+location: "Stuttgart"
+blocks:
+    [
+        {
+            image: "icon_compliance",
+            caption: "Compliance",
+            description: "Building a startup that provides assistance with German consumer laws and regulations.",
+            points:
+                [
+                    "Mapping legal regulations to software models.",
+                    "Generation of product declarations.",
+                    "Compliance with German law and regulations.",
+                    "Building an online platform for customers.",
+                ],
+        },
+    ]
+techs:
+    [
+        { image: "icon_python", caption: "Python" },
+        { image: "icon_typescript_bg", caption: "TypeScript" },
+        { image: "icon_react", caption: "React.js" },
+        { image: "icon_bash", caption: "Bash" },
+        { image: "icon_sqlite-square", caption: "SQLite" },
+    ]
+---
+

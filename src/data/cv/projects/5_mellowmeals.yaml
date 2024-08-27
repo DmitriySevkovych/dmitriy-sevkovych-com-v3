@@ -1,0 +1,31 @@
+---
+date_from: "2019-09-01"
+date_to: "2020-05-31"
+client: "MellowMeals"
+title: "Frontend Developer (Mobile)"
+capacity: "part-time"
+location: "fully remote"
+blocks:
+    [
+        {
+            image: "icon_react",
+            caption: "React-Native",
+            description: "Creation of a mobile app for a healthy nutrition startup. Responsibilities:",
+            points:
+                [
+                    "Frontend development",
+                    "Participation in user interface design",
+                    "Participation in backend development",
+                ],
+        },
+    ]
+techs:
+    [
+        { image: "icon_typescript_bg", caption: "TypeScript" },
+        { image: "icon_css3", caption: "CSS3" },
+        { image: "icon_mongodb", caption: "MongoDB" },
+        { image: "icon_firebase", caption: "Firebase" },
+        { image: "icon_git", caption: "Git" },
+    ]
+---
+

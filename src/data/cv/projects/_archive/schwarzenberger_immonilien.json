@@ -1,0 +1,36 @@
+{
+    "date_from": "09.2020",
+    "title": "Website schwarzenberger-immobilien.de",
+    "subtitle": "1 day, remote",
+    "classes": "print_not is_collapsed",
+    "blocks": [
+        {
+            "image": "icon_sass",
+            "caption": "SASS",
+            "description": "Creation of a static website for a real estate broker. Responsibilities:",
+            "points": ["Website development", "Website deployment"]
+        }
+    ],
+    "techs": [
+        {
+            "image": "icon_css3",
+            "caption": "CSS3"
+        },
+        {
+            "image": "icon_javascript_bg",
+            "caption": "JavaScript"
+        },
+        {
+            "image": "icon_gsap",
+            "caption": "GSAP"
+        },
+        {
+            "image": "icon_webpack",
+            "caption": "Webpack"
+        },
+        {
+            "image": "icon_git",
+            "caption": "Git"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+---
+date_from: "2019-07-01"
+date_to: "2020-08-30"
+client: "yourdata GmbH"
+title: "Full-Stack Developer"
+capacity: "full-time" 
+location: "Stuttgart"
+blocks: [
+    {
+        description: "Development of a new release for an enterprise-scale Java EE web application. Responsibilities:",
+        image: "icon_java",
+        caption: "Java EE",
+        points: [
+            "Software architecture.",
+            "Implementation of REST services and clients.",
+            "Database functions and ad-hoc analysis.",
+            "Implementation of test suites."
+        ]
+    }
+]
+techs: [
+    {
+        image: "icon_openapi",
+        caption: "REST/Swagger"
+    },
+    {
+        image: "icon_spring",
+        caption: "Spring"
+    },
+    {
+        image: "icon_gradle",
+        caption: "Gradle"
+    },
+    {
+        image: "icon_postgresql",
+        caption: "PostgreSQL"
+    },
+    {
+        image: "icon_jenkins",
+        caption: "Jenkins"
+    },
+    {
+        image: "icon_cucumber",
+        caption: "BDD/TDD"
+    }
+]
+---

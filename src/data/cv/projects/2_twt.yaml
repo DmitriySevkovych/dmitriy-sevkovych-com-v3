@@ -1,0 +1,33 @@
+---
+date_from: "2017-07-01"
+date_to: "2019-05-31"
+client: "TWT GmbH"
+title: "Systems Engineer"
+capacity: "full-time employee"
+location: "Stuttgart"
+blocks:
+    [
+        {
+            image: "icon_python",
+            caption: "Python",
+            description: "Participation in multiple industrial and research projects. Responsibilities:",
+            points:
+                [
+                    "Evaluation of engine control units data.",
+                    "Software development, partly as lead.",
+                    "Implementation of outlier detection mechanisms.",
+                    "Customer consultation in applied statistics.",
+                ],
+        },
+    ]
+techs:
+    [
+        { image: "icon_java", caption: "Java 8" },
+        { image: "icon_cs", caption: "C#" },
+        { image: "icon_r", caption: "R" },
+        { image: "icon_jenkins", caption: "Jenkins" },
+        { image: "icon_sqlite-square", caption: "SQLite" },
+        { image: "icon_git", caption: "Git" },
+    ]
+---
+

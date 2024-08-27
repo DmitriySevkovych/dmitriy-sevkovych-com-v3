@@ -1,0 +1,26 @@
+---
+date_from: "2015-05-01"
+date_to: "2017-05-31"
+client: "Ernst & Young"
+title: "Data Scientist (Internship)"
+capacity: "full-time employee"
+location: "Stuttgart"
+blocks:
+    [
+        {
+            image: "icon_sql",
+            caption: "SQL",
+            description: "Developped a tool for analyzing leasing data. Responsibilities:",
+            points: ["TODO"],
+        },
+    ]
+techs:
+    [
+        { image: "icon_sql", caption: "SQL" },
+        { image: "icon_cs", caption: "C#" },
+        { image: "icon_git", caption: "Git" },
+        { image: "icon_access", caption: "MS Access" },
+        { image: "icon_VBA", caption: "VBA" },
+    ]
+---
+
