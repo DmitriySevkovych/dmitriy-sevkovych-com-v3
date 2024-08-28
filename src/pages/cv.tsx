@@ -68,16 +68,23 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                 </ConstrainedWidthDiv>
             </div>
 
+            {/* CV Page Skills */}
+            <ConstrainedWidthDiv className="flex flex-col">
+                <h3 className="text-muted">Core skills</h3>
+                <p>TODO: Skills here</p>
+            </ConstrainedWidthDiv>
+
             {/* CV Page Projects */}
-            <div className="flex flex-col items-center">
-                <h1>Page is still under construction</h1>
+            <ConstrainedWidthDiv className="flex flex-col">
+                <h3 className="text-muted">Projects</h3>
                 <p>TODO: Projects here</p>
-            </div>
+            </ConstrainedWidthDiv>
 
             {/* CV Page Education */}
-            <div>
+            <ConstrainedWidthDiv>
+                <h3 className="text-muted">Education</h3>
                 <p>TODO: Education here</p>
-            </div>
+            </ConstrainedWidthDiv>
         </section>
     )
 }
