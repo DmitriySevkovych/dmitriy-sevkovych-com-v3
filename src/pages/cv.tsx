@@ -1,9 +1,10 @@
 import { ConstrainedWidthDiv } from '@/components/Layouts'
+import Skill from '@/components/cv/Skill'
 import CVPDF from '@/components/pdf/CV'
 import DownloadButton from '@/components/pdf/DownloadButton'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { CV_EDUCATION_DIR, CV_PROJECTS_DIR } from '@/lib/utils'
-import { CVData } from '@/model/cv'
+import { CV_EDUCATION_DIR, CV_PROJECTS_DIR, CV_SKILLS_DIR } from '@/lib/utils'
+import { CVData, CVEducationItem, CVProjectItem, CVSkillItem } from '@/model/cv'
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
@@ -19,8 +20,8 @@ type CVPageProps = {
 }
 
 const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
-    const { education, projects } = cvdata
-    console.log({ education, projects })
+    const { education, projects, skills } = cvdata
+    console.log({ education, projects, skills })
 
     return (
         <section className="flex flex-col items-center justify-evenly gap-10">
@@ -38,7 +39,7 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                         <div>
                             <h1 className="text-xl">Dmitriy Sevkovych</h1>
                             <h2 className="text-lg">M.Sc. Mathematics</h2>
-                            <h3 className="mt-1 text-base">
+                            <h3 className="mt-1 text-base font-light leading-snug">
                                 Freelance IT Specialist <br /> Web + AI/ML
                             </h3>
                         </div>
@@ -70,28 +71,33 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
 
             {/* CV Page Skills */}
             <ConstrainedWidthDiv className="flex flex-col">
-                <h3 className="text-muted">Core skills</h3>
-                <p>TODO: Skills here</p>
+                <h3 className="font-light">Core skills</h3>
+                <div className="grid grid-cols-2 gap-2 py-3 lg:grid-cols-4 lg:px-16">
+                    {skills.map((skill) => (
+                        <Skill key={skill.order} {...skill} />
+                    ))}
+                </div>
             </ConstrainedWidthDiv>
 
             {/* CV Page Projects */}
             <ConstrainedWidthDiv className="flex flex-col">
-                <h3 className="text-muted">Projects</h3>
+                <h3 className="font-light">Projects</h3>
                 <p>TODO: Projects here</p>
             </ConstrainedWidthDiv>
 
             {/* CV Page Education */}
             <ConstrainedWidthDiv>
-                <h3 className="text-muted">Education</h3>
+                <h3 className="font-light">Education</h3>
                 <p>TODO: Education here</p>
             </ConstrainedWidthDiv>
         </section>
     )
 }
 
-const _readDataFromFiles = (
-    dirname: string
-): { frontMatter: object; order: number }[] => {
+const _readDataFromFiles = <T extends unknown & { order: number }>(
+    dirname: string,
+    descending: boolean = true
+): T[] => {
     const files = fs.readdirSync(dirname, { withFileTypes: true })
     const data = files
         .filter((dirent) => dirent.isFile())
@@ -107,11 +113,14 @@ const _readDataFromFiles = (
             const order = parseInt(filename.split('_')[0])
 
             return {
-                frontMatter,
+                ...frontMatter,
                 order,
-            }
+            } as T
         })
-        .sort((a, b) => b.order - a.order)
+
+    if (descending) {
+        return data.sort((a, b) => b.order - a.order)
+    }
 
     return data
 }
@@ -120,8 +129,10 @@ export const getStaticProps = async () => {
     return {
         props: {
             cvdata: {
-                education: _readDataFromFiles(CV_EDUCATION_DIR),
-                projects: _readDataFromFiles(CV_PROJECTS_DIR),
+                education:
+                    _readDataFromFiles<CVEducationItem>(CV_EDUCATION_DIR),
+                projects: _readDataFromFiles<CVProjectItem>(CV_PROJECTS_DIR),
+                skills: _readDataFromFiles<CVSkillItem>(CV_SKILLS_DIR, false),
             },
         },
     }

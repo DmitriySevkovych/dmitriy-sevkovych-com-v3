@@ -21,6 +21,13 @@ export const CV_PROJECTS_DIR = path.join(
     'cv',
     'projects'
 )
+export const CV_SKILLS_DIR = path.join(
+    process.cwd(),
+    'src',
+    'data',
+    'cv',
+    'skills'
+)
 
 /*
  * Helper types

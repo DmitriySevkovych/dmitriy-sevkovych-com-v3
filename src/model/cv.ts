@@ -30,7 +30,18 @@ export type CVProjectItem = {
     }[]
 }
 
+export type CVSkillItem = {
+    order: number
+    caption: string
+    // totalExperienceYears: string
+    blocks: {
+        image: string
+        caption: string
+    }[]
+}
+
 export type CVData = {
     education: CVEducationItem[]
     projects: CVProjectItem[]
+    skills: CVSkillItem[]
 }
