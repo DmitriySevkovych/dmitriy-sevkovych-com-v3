@@ -4,7 +4,6 @@ import React from 'react'
 
 import ReadDurationIndicator from './ReadDurationIndicator'
 import Tag from './Tag'
-import { Badge } from './ui/badge'
 import {
     Card,
     CardContent,
@@ -19,7 +18,7 @@ type BlogPostPreviewProps = {
 }
 
 const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({ post }) => {
-    const { title, date, tags, abstract, language, length } = post.frontMatter
+    const { title, date, tags, abstract, length } = post.frontMatter
 
     return (
         <Link href={`/blog/${post.slug}`} passHref>
