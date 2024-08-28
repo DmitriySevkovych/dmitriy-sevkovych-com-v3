@@ -1,6 +1,6 @@
 'use client'
 
-import { DocumentProps } from '@react-pdf/renderer'
+import ReactPDF, { DocumentProps } from '@react-pdf/renderer'
 import { FileText } from 'lucide-react'
 import dynamic from 'next/dynamic'
 import React from 'react'
@@ -16,17 +16,12 @@ const PDFDownloadLink = dynamic(
     }
 )
 
-type DownloadButtonProps = {
-    document: React.ReactElement<
-        DocumentProps,
-        string | React.JSXElementConstructor<any>
-    >
-    fileName: string
-}
+interface DownloadButtonProps extends ReactPDF.PDFDownloadLinkProps {}
 
 const DownloadButton: React.FC<DownloadButtonProps> = ({
     document,
     fileName,
+    className,
 }) => {
     const _button = (
         <Button className="gap-1" variant={'outline'}>
@@ -37,7 +32,11 @@ const DownloadButton: React.FC<DownloadButtonProps> = ({
     )
 
     return (
-        <PDFDownloadLink document={document} fileName={fileName}>
+        <PDFDownloadLink
+            className={className}
+            document={document}
+            fileName={fileName}
+        >
             {({ blob, url, loading, error }) =>
                 loading ? 'Loading document...' : _button
             }

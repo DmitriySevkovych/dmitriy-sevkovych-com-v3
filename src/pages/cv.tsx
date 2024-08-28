@@ -1,5 +1,7 @@
+import { ConstrainedWidthDiv } from '@/components/Layouts'
 import CVPDF from '@/components/pdf/CV'
 import DownloadButton from '@/components/pdf/DownloadButton'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { CV_EDUCATION_DIR, CV_PROJECTS_DIR } from '@/lib/utils'
 import { CVData } from '@/model/cv'
 import fs from 'fs'
@@ -21,20 +23,58 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
     console.log({ education, projects })
 
     return (
-        <section className="flex flex-col items-center justify-evenly gap-10 p-10">
-            <div className="flex w-full justify-evenly">
-                <p>TODO: Header here</p>
-                <DownloadButton
-                    document={<CVPDF {...cvdata} />}
-                    fileName={_getPdfFileName()}
-                />
+        <section className="flex flex-col items-center justify-evenly gap-10">
+            {/* CV Page Header */}
+            <div className="flex w-full flex-col items-center gap-5">
+                <div className="flex flex-col-reverse items-center justify-evenly gap-8 lg:flex-row lg:gap-16">
+                    <div className="flex items-center gap-5">
+                        <Avatar className="h-28 w-28 lg:h-36 lg:w-36">
+                            <AvatarImage
+                                src="/sevkovych_portrait_375.png"
+                                alt="Dmitriy Sevkovych"
+                            />
+                            <AvatarFallback>DS</AvatarFallback>
+                        </Avatar>
+                        <div>
+                            <h1 className="text-xl">Dmitriy Sevkovych</h1>
+                            <h2 className="text-lg">M.Sc. Mathematics</h2>
+                            <h3 className="mt-1 text-base">
+                                Freelance IT Specialist <br /> Web + AI/ML
+                            </h3>
+                        </div>
+                    </div>
+                    <DownloadButton
+                        document={<CVPDF {...cvdata} />}
+                        fileName={_getPdfFileName()}
+                    />
+                </div>
+
+                <ConstrainedWidthDiv className="flex flex-col gap-2">
+                    <p>Hi there!</p>
+
+                    <p>
+                        I&apos;m a jack of all trades and proud of it: I have
+                        hands-on professional experience with planning,
+                        designing, developing, deploying and monitoring modern
+                        web applications and machine learning projects. And
+                        I&apos;m also not too bad with maths😉
+                    </p>
+
+                    <p>
+                        Being a one-man IT department, I like to work with
+                        start-ups or small teams that benefit from my broad
+                        spectrum of skills.
+                    </p>
+                </ConstrainedWidthDiv>
             </div>
 
+            {/* CV Page Projects */}
             <div className="flex flex-col items-center">
                 <h1>Page is still under construction</h1>
                 <p>TODO: Projects here</p>
             </div>
 
+            {/* CV Page Education */}
             <div>
                 <p>TODO: Education here</p>
             </div>
