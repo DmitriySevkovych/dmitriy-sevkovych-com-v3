@@ -1,31 +1,26 @@
 ---
 date_from: "2023-11-01"
-date_to: "ongoing"
+date_until: "ongoing"
 client: "AWWT GmbH"
-title: "Machine Learning Engineer"
+title: "Lead Engineer & Technical Consultant"
 capacity: "part-time"
 location: "fully remote"
-blocks:
+description: "Responsible for all backend and AI components of an artwork shopping platform."
+responsibilities:
     [
-        {
-            image: "icon_openai",
-            caption: "OpenAI",
-            description: "Responsible for all backend and AI components of an artwork shopping platform.",
-            points:
-                [
-                    "Multi-modal semantic search",
-                    "Recommender system",
-                    "REST services",
-                    "Data migration",
-                    "Containerization and deployment",
-                    "Monitoring",
-                ],
-        },
+        "Consulted on architectural decisions.",
+        "Implemented multi-modal semantic search.",
+        "Implemented recommender system.",
+        "Implemented REST services.",
+        "Set up containerization.",
+        "Set up monitoring.",
     ]
-techs:
+techstack:
     [
         { image: "icon_python", caption: "Python" },
         { image: "icon_pytorch", caption: "PyTorch" },
+        { image: "icon_openai", caption: "OpenAI" },
+        { image: "icon_huggingface", caption: "HuggingFace" },
         { image: "icon_typescript_bg", caption: "TypeScript" },
         { image: "icon_react", caption: "React.js" },
         { image: "icon_kubernetes", caption: "Kubernetes" },

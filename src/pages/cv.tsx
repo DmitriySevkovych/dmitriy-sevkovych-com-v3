@@ -1,4 +1,5 @@
 import { ConstrainedWidthDiv } from '@/components/Layouts'
+import Project from '@/components/cv/Project'
 import Skill from '@/components/cv/Skill'
 import CVPDF from '@/components/pdf/CV'
 import DownloadButton from '@/components/pdf/DownloadButton'
@@ -82,7 +83,11 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
             {/* CV Page Projects */}
             <ConstrainedWidthDiv className="flex flex-col">
                 <h3 className="font-light">Projects</h3>
-                <p>TODO: Projects here</p>
+                <div className="grid grid-cols-1 gap-5 py-3 lg:grid-cols-2">
+                    {projects.map((project) => (
+                        <Project key={project.order} {...project} />
+                    ))}
+                </div>
             </ConstrainedWidthDiv>
 
             {/* CV Page Education */}

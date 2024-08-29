@@ -1,26 +1,21 @@
 ---
 date_from: "2022-01-01"
-date_to: "2023-02-28"
+date_until: "2023-02-28"
 client: "Deklarando"
-title: "Co-Founder, Developer"
+title: "Co-Founder, CTO"
 capacity: "part-time"
 location: "Stuttgart"
-blocks:
+description: |
+    Bootstrapped a startup for providing assistance with German consumer laws and regulations.
+    Did not take off because of insufficient product validation and poor product/market fit. Lessons learned...
+responsibilities:
     [
-        {
-            image: "icon_compliance",
-            caption: "Compliance",
-            description: "Building a startup that provides assistance with German consumer laws and regulations.",
-            points:
-                [
-                    "Mapping legal regulations to software models.",
-                    "Generation of product declarations.",
-                    "Compliance with German law and regulations.",
-                    "Building an online platform for customers.",
-                ],
-        },
+        "Mapping legal regulations to software models.",
+        "Generation of product declarations.",
+        "Compliance with German law and regulations.",
+        "Building an online platform for customers.",
     ]
-techs:
+techstack:
     [
         { image: "icon_python", caption: "Python" },
         { image: "icon_typescript_bg", caption: "TypeScript" },

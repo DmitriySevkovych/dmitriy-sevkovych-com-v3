@@ -1,20 +1,13 @@
 ---
 date_from: "2014-05-01"
-date_to: "2014-10-31"
+date_until: "2014-10-31"
 client: "Mercedes Benz Bank AG"
 title: "Data Scientist (Internship)"
 capacity: "full-time employee"
 location: "Stuttgart"
-blocks:
-    [
-        {
-            image: "icon_sql",
-            caption: "SQL",
-            description: "Data analysis and data ingestion automation. Responsibilities:",
-            points: ["TODO"],
-        },
-    ]
-techs:
+description: "Data analysis and data ingestion automation."
+responsibilities: ["TODO"]
+techstack:
     [
         { image: "icon_sql", caption: "SQL" },
         { image: "icon_sas", caption: "SAS" },

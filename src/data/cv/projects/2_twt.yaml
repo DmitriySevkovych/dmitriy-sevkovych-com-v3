@@ -1,29 +1,23 @@
 ---
 date_from: "2017-07-01"
-date_to: "2019-05-31"
+date_until: "2019-05-31"
 client: "TWT GmbH"
 title: "Systems Engineer"
 capacity: "full-time employee"
 location: "Stuttgart"
-blocks:
+description: "My last position as an employee. Multiple industrial and research projects."
+responsibilities:
     [
-        {
-            image: "icon_python",
-            caption: "Python",
-            description: "Participation in multiple industrial and research projects. Responsibilities:",
-            points:
-                [
-                    "Evaluation of engine control units data.",
-                    "Software development, partly as lead.",
-                    "Implementation of outlier detection mechanisms.",
-                    "Customer consultation in applied statistics.",
-                ],
-        },
+        "Software development, partly as lead.",
+        "Evaluated engine control units data.",
+        "Implemented outlier detection mechanisms.",
+        "Consulted clients in applied statistics.",
     ]
-techs:
+techstack:
     [
-        { image: "icon_java", caption: "Java 8" },
+        { image: "icon_java", caption: "Java" },
         { image: "icon_cs", caption: "C#" },
+        { image: "icon_python", caption: "Python" },
         { image: "icon_r", caption: "R" },
         { image: "icon_jenkins", caption: "Jenkins" },
         { image: "icon_sqlite-square", caption: "SQLite" },

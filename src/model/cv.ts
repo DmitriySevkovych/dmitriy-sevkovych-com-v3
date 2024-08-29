@@ -18,13 +18,9 @@ export type CVProjectItem = {
     title: string
     capacity: string
     location: string
-    blocks: {
-        image: string
-        caption: string
-        description: string
-        points: string[]
-    }[]
-    techs: {
+    description: string
+    responsibilities: string[]
+    techstack: {
         image: string
         caption: string
     }[]
