@@ -3,44 +3,26 @@ date_from: "2019-07-01"
 date_until: "2020-08-30"
 client: "yourdata GmbH"
 title: "Full-Stack Developer"
-capacity: "full-time" 
+capacity: "full-time"
 location: "Stuttgart"
 description: "New release of a B2B Java EE web application."
-responsibilities: [
-    "Proposed software architecture solutions.",
-    "Implemented REST services and clients.",
-    "Implemented database functions.",
-    "Carried out ad-hoc database analysis.",
-    "Implemented of test suites."
-]
-techstack: [
-    {
-        image: "icon_java",
-        caption: "Java 8"
-    },
-    {
-        image: "icon_openapi",
-        caption: "REST/Swagger"
-    },
-    {
-        image: "icon_spring",
-        caption: "Spring"
-    },
-    {
-        image: "icon_gradle",
-        caption: "Gradle"
-    },
-    {
-        image: "icon_postgresql",
-        caption: "PostgreSQL"
-    },
-    {
-        image: "icon_jenkins",
-        caption: "Jenkins"
-    },
-    {
-        image: "icon_cucumber",
-        caption: "BDD/TDD"
-    }
-]
+responsibilities:
+    [
+        "Proposed software architecture solutions.",
+        "Implemented REST services and clients.",
+        "Implemented database functions.",
+        "Carried out ad-hoc database analysis.",
+        "Implemented of test suites.",
+    ]
+techstack:
+    [
+        { image: "icon_java", caption: "Java 8" },
+        { image: "icon_openapi", caption: "REST/Swagger" },
+        { image: "icon_spring", caption: "Spring" },
+        { image: "icon_gradle", caption: "Gradle" },
+        { image: "icon_postgresql", caption: "PostgreSQL" },
+        { image: "icon_jenkins", caption: "Jenkins" },
+        { image: "icon_cucumber", caption: "BDD/TDD" },
+    ]
 ---
+

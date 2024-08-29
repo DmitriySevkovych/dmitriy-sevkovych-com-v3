@@ -3,45 +3,27 @@ date_from: "2020-12-01"
 date_until: "2022-04-30"
 client: "yourdata GmbH"
 title: "Backend- & DevOps-Engineer"
-capacity: "full-time" 
+capacity: "full-time"
 location: "fully remote"
 description: "Built real-time data pipelines with Kafka and Kafka Streams."
-responsibilities: [
-    "Improved memory and I/O footprint of the software.",
-    "Fine-tuned Kafka cluster.",
-    "Task automation through shell scripting.",
-    "Support with container orchestration.",
-    "Infrastructure support (on premises and cloud).",
-    "Mentored junior devs."
-]
-techstack: [
-    {
-        image: "icon_kafka",
-        caption: "Kafka"
-    },
-    {
-        image: "icon_java",
-        caption: "Java 8"
-    },
-    {
-        image: "icon_spring",
-        caption: "Spring Boot"
-    },
-    {
-        image: "icon_postgresql",
-        caption: "PostgreSQL"
-    },
-    {
-        image: "icon_docker",
-        caption: "Docker"
-    },
-    {
-        image: "icon_bash",
-        caption: "Bash"
-    },
-    {
-        image: "icon_python",
-        caption: "Python"
-    }
-]
+responsibilities:
+    [
+        "Improved memory and I/O footprint of the software.",
+        "Fine-tuned Kafka cluster.",
+        "Task automation through shell scripting.",
+        "Support with container orchestration.",
+        "Infrastructure support (on premises and cloud).",
+        "Mentored junior devs.",
+    ]
+techstack:
+    [
+        { image: "icon_kafka", caption: "Kafka" },
+        { image: "icon_java", caption: "Java 8" },
+        { image: "icon_spring", caption: "Spring Boot" },
+        { image: "icon_postgresql", caption: "PostgreSQL" },
+        { image: "icon_docker", caption: "Docker" },
+        { image: "icon_bash", caption: "Bash" },
+        { image: "icon_python", caption: "Python" },
+    ]
 ---
+
