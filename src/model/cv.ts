@@ -4,10 +4,8 @@ export type CVEducationItem = {
     date_until: Date
     title: string
     location: string
-    blocks: {
-        caption: string
-        points: string[]
-    }[]
+    focus: string[]
+    minor: string
 }
 
 export type CVProjectItem = {
