@@ -7,6 +7,6 @@ capacity: "depending on project"
 location: "fully remote"
 description: "Development of websites like this one."
 responsibilities: ["TODO"]
-techstack: ["TODO"]
+techstack: [{ image: "icon_noicon", caption: "TODO"}]
 ---
 

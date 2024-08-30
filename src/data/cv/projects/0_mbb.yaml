@@ -9,11 +9,11 @@ description: "Data analysis and data ingestion automation."
 responsibilities: ["TODO"]
 techstack:
     [
-        { image: "icon_sql", caption: "SQL" },
+        { image: "icon_postgresql", caption: "SQL" },
         { image: "icon_sas", caption: "SAS" },
         { image: "icon_r", caption: "R" },
-        { image: "icon_VBA", caption: "VBA" },
-        { image: "icon_excel", caption: "MS Excel" },
+        { image: "icon_vba", caption: "VBA" },
+        { image: "icon_ms_excel", caption: "MS Excel" },
     ]
 ---
 

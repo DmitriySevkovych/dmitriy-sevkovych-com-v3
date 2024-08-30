@@ -9,11 +9,11 @@ description: "Developped a tool for analyzing leasing data."
 responsibilities: ["TODO"]
 techstack:
     [
-        { image: "icon_sql", caption: "SQL" },
+        { image: "icon_postgresql", caption: "SQL" },
         { image: "icon_cs", caption: "C#" },
         { image: "icon_git", caption: "Git" },
-        { image: "icon_access", caption: "MS Access" },
-        { image: "icon_VBA", caption: "VBA" },
+        { image: "icon_ms_access", caption: "MS Access" },
+        { image: "icon_vba", caption: "VBA" },
     ]
 ---
 
