@@ -47,7 +47,7 @@ const TechStack: React.FC<Pick<ProjectProps, 'techstack'>> = ({
                                         alt={tech.caption}
                                     />
                                 </div>
-                                <div>{tech.caption}</div>
+                                <div className="truncate">{tech.caption}</div>
                             </div>
                         </CarouselItem>
                     ))}

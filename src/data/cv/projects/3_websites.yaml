@@ -6,7 +6,16 @@ title: "Website Developer"
 capacity: "depending on project"
 location: "fully remote"
 description: "Development of websites like this one."
-responsibilities: ["TODO"]
-techstack: [{ image: "icon_noicon", caption: "TODO"}]
+responsibilities: ["Don't know what else to write here. I build websites..."]
+techstack: [
+  { image: "icon_html5", caption: "HTML"},
+  { image: "icon_css3", caption: "CSS"},
+  { image: "icon_sass", caption: "SASS"},
+  { image: "icon_javascript_bg", caption: "JavaScript"},
+  { image: "icon_threejs", caption: "Three.js"},
+  { image: "icon_webgl", caption: "WebGL"},
+  { image: "icon_webpack", caption: "Webpack"},
+  { image: "icon_nextjs", caption: "Next.js"},
+]
 ---
 

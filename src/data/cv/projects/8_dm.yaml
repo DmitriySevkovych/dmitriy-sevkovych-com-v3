@@ -10,7 +10,7 @@ responsibilities:
     [
         "Architectural restructuring of existing services.",
         "Implemented new microservices.",
-        "Implemented scripts cashbox orchestration.",
+        "Wrote scripts for cashbox orchestration.",
         "Ensured high availability.",
         "Ensured compliance with fiscal regulations.",
     ]
