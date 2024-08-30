@@ -3,27 +3,27 @@ import Image from 'next/image'
 import React from 'react'
 
 import { Button } from '../ui/button'
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '../ui/hover-card'
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
 
 type SkillProps = CVSkillItem
 
 const Skill: React.FC<SkillProps> = ({ caption, blocks }) => {
     return (
-        <HoverCard>
-            <HoverCardTrigger asChild>
+        <Popover>
+            <PopoverTrigger asChild>
                 <Button
-                    variant={'secondary'}
-                    className="text-wrap transition-colors hover:bg-accent"
+                    variant={'ghost'}
+                    className="text-wrap transition-colors hover:bg-accent/70"
                 >
                     {caption}
                 </Button>
-            </HoverCardTrigger>
-            <HoverCardContent className="w-80">
+            </PopoverTrigger>
+            <PopoverContent className="w-80">
                 <div className="flex justify-between space-x-4">
                     TODO: implement
                 </div>
-            </HoverCardContent>
-        </HoverCard>
+            </PopoverContent>
+        </Popover>
     )
 }
 

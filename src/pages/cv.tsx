@@ -8,6 +8,7 @@ import { CV_EDUCATION_DIR, CV_PROJECTS_DIR, CV_SKILLS_DIR } from '@/lib/utils'
 import { CVData, CVEducationItem, CVProjectItem, CVSkillItem } from '@/model/cv'
 import fs from 'fs'
 import matter from 'gray-matter'
+import { MousePointerClick } from 'lucide-react'
 import path from 'path'
 import React from 'react'
 
@@ -25,9 +26,9 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
     console.log({ education, projects, skills })
 
     return (
-        <section className="flex flex-col items-center justify-evenly gap-10">
+        <section className="flex flex-col items-center justify-evenly gap-12">
             {/* CV Page Header */}
-            <div className="flex w-full flex-col items-center gap-5">
+            <div className="flex w-full flex-col items-center gap-8">
                 <div className="flex flex-col-reverse items-center justify-evenly gap-8 lg:flex-row lg:gap-16">
                     <div className="flex items-center gap-5">
                         <Avatar className="h-28 w-28 lg:h-36 lg:w-36">
@@ -71,12 +72,31 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
             </div>
 
             {/* CV Page Skills */}
-            <ConstrainedWidthDiv className="flex flex-col">
+            <ConstrainedWidthDiv className="flex flex-col gap-1">
                 <h3 className="font-light">Core skills</h3>
-                <div className="grid grid-cols-2 gap-2 py-3 lg:grid-cols-4 lg:px-16">
-                    {skills.map((skill) => (
-                        <Skill key={skill.order} {...skill} />
-                    ))}
+                <p>
+                    Most of the time I use{' '}
+                    <span className="font-medium text-accent">Java</span>,{' '}
+                    <span className="font-medium text-accent">Python</span> or{' '}
+                    <span className="font-medium text-accent">
+                        JavaScript/TypeScript
+                    </span>
+                    , but I don&apos;t mind switching to other languages. Here
+                    is what I usually do:
+                </p>
+                <div className="grid grid-cols-1 items-center lg:grid-cols-[10fr_90fr]">
+                    <div className="hidden w-full justify-end lg:flex">
+                        <MousePointerClick
+                            className="scale-x-[-1] transform"
+                            strokeOpacity={0.5}
+                            strokeWidth={1}
+                        />
+                    </div>
+                    <div className="grid grid-cols-2 gap-2 py-3 lg:grid-cols-4">
+                        {skills.map((skill) => (
+                            <Skill key={skill.order} {...skill} />
+                        ))}
+                    </div>
                 </div>
             </ConstrainedWidthDiv>
 
