@@ -53,9 +53,6 @@ const TechStack: React.FC<Pick<ProjectProps, 'techstack'>> = ({
                     ))}
                 </CarouselContent>
             </Carousel>
-            {/* <div className='pt-1 pl-2'>
-
-            </div> */}
         </div>
     )
 }
