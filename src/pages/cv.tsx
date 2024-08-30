@@ -23,7 +23,6 @@ type CVPageProps = {
 
 const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
     const { education, projects, skills } = cvdata
-    console.log({ education, projects, skills })
 
     return (
         <section className="flex flex-col items-center justify-evenly gap-12">
