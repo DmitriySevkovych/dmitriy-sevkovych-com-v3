@@ -5,8 +5,13 @@ client: "Ernst & Young"
 title: "Data Scientist (Internship)"
 capacity: "full-time employee"
 location: "Stuttgart"
-description: "Developped a tool for analyzing leasing data."
-responsibilities: ["TODO"]
+description: "Developped a desktop tool for analyzing leasing data."
+responsibilities: [
+    "Extended and improved the tool UI.",
+    "Implemented data aggregation queries.",
+    "Implemented leasing I/O, comparison, reporting.",
+    "Customized UI for different clients."
+]
 techstack:
     [
         { image: "icon_postgresql", caption: "SQL" },
