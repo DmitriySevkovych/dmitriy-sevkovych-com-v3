@@ -5,8 +5,13 @@ client: "Mercedes Benz Bank AG"
 title: "Data Scientist (Internship)"
 capacity: "full-time employee"
 location: "Stuttgart"
-description: "Data analysis and data ingestion automation."
-responsibilities: ["TODO"]
+description: "Risk management: data analysis and process automation."
+responsibilities: [
+    "Performed data analysis (cleansing, discovery).",
+    "Automated data aggregation tasks.",
+    "Automated report generation.",
+    "Performed quality assessment and documentation of in-house tools."
+]
 techstack:
     [
         { image: "icon_postgresql", caption: "SQL" },
