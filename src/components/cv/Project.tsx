@@ -92,8 +92,8 @@ const Project: React.FC<ProjectProps> = ({
             <CardHeader>
                 <CardDescription>{`${date_from} - ${date_until} // ${location}`}</CardDescription>
                 <CardTitle className="flex flex-col">
-                    <h4 className="text-xl">{title}</h4>
-                    <h5 className="text-lg">{`@ ${client}`}</h5>
+                    <div className="text-xl">{title}</div>
+                    <div className="text-lg">{`@ ${client}`}</div>
                 </CardTitle>
             </CardHeader>
             <CardContent className="flex-grow">

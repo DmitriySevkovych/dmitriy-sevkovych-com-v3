@@ -25,8 +25,8 @@ const Education: React.FC<EducationProps> = ({
             <CardHeader>
                 <CardDescription>{`${date_from} - ${date_until}`}</CardDescription>
                 <CardTitle className="flex flex-col">
-                    <h1 className="text-xl">{title}</h1>
-                    <h2 className="text-lg">{`@ ${location}`}</h2>
+                    <div className="text-xl">{title}</div>
+                    <div className="text-lg">{`@ ${location}`}</div>
                 </CardTitle>
             </CardHeader>
             <CardContent>
