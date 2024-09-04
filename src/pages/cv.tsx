@@ -56,7 +56,7 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                     <p>Hi there!</p>
 
                     <p>
-                        I&apos;m a jack of all trades and proud of it: I have
+                        I am a mathematician and a software developer. I have
                         hands-on professional experience with planning,
                         designing, developing, deploying and monitoring modern
                         web applications and machine learning projects. And
@@ -64,9 +64,9 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                     </p>
 
                     <p>
-                        Being a one-man IT department, I like to work with
-                        start-ups or small teams that benefit from my broad
-                        spectrum of skills.
+                        Being something like a one-man IT department, I like to
+                        work with start-ups or small teams that benefit from my
+                        broad spectrum of skills.
                     </p>
                 </ConstrainedWidthDiv>
             </div>
