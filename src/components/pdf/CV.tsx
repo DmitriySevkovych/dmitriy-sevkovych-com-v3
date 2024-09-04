@@ -42,8 +42,15 @@ type CVPDFProps = CVData
 const CVPDF: React.FC<CVPDFProps> = ({ education, projects }) => (
     <Document>
         <Page size="A4">
-            <View>
-                <Text style={tw('text-accent')}>Section #1</Text>
+            <View
+                style={tw(
+                    'w-full h-full flex flex-col justify-center items-center'
+                )}
+            >
+                <Text style={tw('text-muted')}>CV PDF under construction</Text>
+                <Text style={tw('text-muted text-lg')}>
+                    Yours truly, Dmitriy Sevkovych
+                </Text>
             </View>
         </Page>
     </Document>
