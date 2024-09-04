@@ -1,22 +1,49 @@
 import { CVData } from '@/model/cv'
-import { Document, Page, StyleSheet, Text, View } from '@react-pdf/renderer'
+import { Document, Page, Text, View } from '@react-pdf/renderer'
+import { createTw } from 'react-pdf-tailwind'
 
-// TODO: try to integrate `react-pdf-tailwind` with nextjs
-const styles = StyleSheet.create({
-    page: { backgroundColor: 'tomato' },
-    section: { color: 'white', textAlign: 'center', margin: 30 },
+const tw = createTw({
+    theme: {
+        container: {
+            center: true,
+            padding: '2rem',
+            screens: {
+                '2xl': '1400px',
+            },
+        },
+        extend: {
+            colors: {
+                border: '#e2e8f0',
+                ring: '#020817',
+                background: '#ffffff',
+                foreground: '#020817',
+                primary: '#0f172a',
+                'primary-foreground': '#f8fafc',
+                secondary: '#f1f5f9',
+                'secondary-foreground': '#0f172a',
+                muted: '#cccccc',
+                'muted-foreground': '#64748b',
+                accent: '#ee7411',
+                'accent-foreground': '#0f172a',
+                card: '#ffffff',
+                'card-foreground': '#020817',
+            },
+            borderRadius: {
+                lg: '0.5rem',
+                md: 'calc(0.5rem - 2px)',
+                sm: 'calc(0.5rem - 4px)',
+            },
+        },
+    },
 })
 
 type CVPDFProps = CVData
 
 const CVPDF: React.FC<CVPDFProps> = ({ education, projects }) => (
     <Document>
-        <Page size="A4" style={styles.page}>
-            <View style={styles.section}>
-                <Text>Section #1</Text>
-            </View>
-            <View style={styles.section}>
-                <Text>Section #2</Text>
+        <Page size="A4">
+            <View>
+                <Text style={tw('text-accent')}>Section #1</Text>
             </View>
         </Page>
     </Document>
