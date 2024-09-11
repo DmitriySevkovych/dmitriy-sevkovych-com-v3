@@ -60,7 +60,7 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
 
                     <p>
                         I am freelance one-man IT department with hands-on
-                        professional experience in designing, developing,
+                        professional experience in architecting, developing,
                         deploying and monitoring web applications and machine
                         learning projects. And I&apos;m also not too bad with
                         maths😉

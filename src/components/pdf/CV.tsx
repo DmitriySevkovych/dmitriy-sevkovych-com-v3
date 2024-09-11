@@ -84,7 +84,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                         </Text>
                         <Text>
                             I am freelance one-man IT department with hands-on
-                            professional experience in designing, developing,
+                            professional experience in architecting, developing,
                             deploying and monitoring web applications and
                             machine learning projects.
                         </Text>
