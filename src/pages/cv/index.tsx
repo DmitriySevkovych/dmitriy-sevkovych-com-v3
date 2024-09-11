@@ -53,20 +53,33 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                 </div>
 
                 <ConstrainedWidthDiv className="flex flex-col gap-2">
-                    <p>Hi there!</p>
-
                     <p>
-                        I am a mathematician and a software developer. I have
-                        hands-on professional experience with planning,
-                        designing, developing, deploying and monitoring modern
-                        web applications and machine learning projects. And
-                        I&apos;m also not too bad with maths😉
+                        You need help with a little bit of everything in your
+                        software project? Lucky you!
                     </p>
 
                     <p>
-                        Being something like a one-man IT department, I like to
-                        work with start-ups or small teams that benefit from my
-                        broad spectrum of skills.
+                        I am freelance one-man IT department with hands-on
+                        professional experience in designing, developing,
+                        deploying and monitoring web applications and machine
+                        learning projects. And I&apos;m also not too bad with
+                        maths😉
+                    </p>
+
+                    <p>
+                        Give me a <a href="tel:+491778371163">call</a>, ping me
+                        on{' '}
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={
+                                'https://www.linkedin.com/in/dmitriy-sevkovych/'
+                            }
+                        >
+                            LinkedIn
+                        </a>{' '}
+                        or send me an{' '}
+                        <a href="mailto:dmitriy@sevkovych.com">e-mail</a>!
                     </p>
                 </ConstrainedWidthDiv>
             </div>
@@ -76,13 +89,11 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                 <h3 className="font-light">Core skills</h3>
                 <p>
                     Most of the time I use{' '}
-                    <span className="font-medium text-accent">Java</span>,{' '}
-                    <span className="font-medium text-accent">Python</span> or{' '}
-                    <span className="font-medium text-accent">
-                        JavaScript/TypeScript
-                    </span>
-                    , but I don&apos;t mind switching to other languages. Here
-                    is what I usually do:
+                    <span className="font-medium">Java</span>,{' '}
+                    <span className="font-medium">Python</span> or{' '}
+                    <span className="font-medium">JavaScript/TypeScript</span>,
+                    but I don&apos;t mind switching to other languages. Here is
+                    what I usually do:
                 </p>
                 <div className="grid grid-cols-1 items-center lg:grid-cols-[10fr_90fr]">
                     <div className="hidden w-full justify-end lg:flex">
