@@ -1,5 +1,9 @@
 ---
 caption: Machine Learning
-blocks: []
+subskills: [
+  {caption: 'GenAI: LLMs, Diffusers', tools: ['HuggingFace', 'PyTorch']},
+  {caption: 'Chatbots', tools: ['Langchain', 'Voiceflow']},
+  {caption: 'Other ML', tools: ['Scikit-Learn']},
+]
 ---
 

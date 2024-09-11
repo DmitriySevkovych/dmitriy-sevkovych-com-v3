@@ -7,7 +7,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
 
 type SkillProps = CVSkillItem
 
-const Skill: React.FC<SkillProps> = ({ caption, blocks }) => {
+const Skill: React.FC<SkillProps> = ({ caption, subskills }) => {
     return (
         <Popover>
             <PopoverTrigger asChild>
@@ -19,8 +19,15 @@ const Skill: React.FC<SkillProps> = ({ caption, blocks }) => {
                 </Button>
             </PopoverTrigger>
             <PopoverContent className="w-80">
-                <div className="flex justify-between space-x-4">
-                    TODO: implement
+                <div className="flex flex-col gap-3">
+                    {subskills.map((skill, i) => (
+                        <div key={i}>
+                            <h5 className="text-lg font-light">
+                                {skill.caption}
+                            </h5>
+                            <p>{skill.tools.join(', ')}</p>
+                        </div>
+                    ))}
                 </div>
             </PopoverContent>
         </Popover>

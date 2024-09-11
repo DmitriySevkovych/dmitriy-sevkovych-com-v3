@@ -1,10 +1,9 @@
 ---
 caption: Frontend
-blocks: [
-  { image: "icon_reactjs.svg", caption: React.js },
-  { image: "icon_nextjs.svg", caption: Next.js },
-  { image: "icon_reactjs.svg", caption: React-Native },
-  { image: "icon_r3f.svg", caption: R3F },
+subskills: [
+  {caption: 'Web', tools: ['React.js', 'Next.js', 'Redux', 'Zustand', 'shadcn/ui', 'Material-UI', 'Tailwind.css', 'GSAP', 'Framer Motion', 'React-Three-Fiber']},
+  {caption: 'Mobile', tools: ['React-Native']},
+  {caption: 'Oldschool', tools: ['HTML', 'CSS', 'SASS', 'jQuery', 'Bootstrap', 'Handlebars', 'Moustache', 'Jekyll']},
 ]
 ---
 

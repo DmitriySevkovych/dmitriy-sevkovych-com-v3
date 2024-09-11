@@ -1,0 +1,13 @@
+---
+caption: Operations
+subskills: [
+  {caption: 'Scripting', tools: ['Bash', 'Python']},
+  {caption: 'CI/CD', tools: ['GitHub Actions', 'GitLab-CI', 'Jenkins']},
+  {caption: 'Containerization', tools: ['Docker']},
+  {caption: 'Orchestration', tools: ['Docker-Compose', 'Docker-Swarm', 'Kubernetes', 'Rancher', 'Lens']},
+  {caption: 'Log Monitoring', tools: ['Kibana', 'Grafana', 'AWS CloudWatch']},
+  {caption: 'Performance Monitoring', tools: ['Sentry', 'JMeter', 'React-DevTools', 'Lighthouse']},
+  {caption: 'Other', tools: ['Ansible', 'Puppet', 'Traefik', 'Nginx']},
+]
+---
+

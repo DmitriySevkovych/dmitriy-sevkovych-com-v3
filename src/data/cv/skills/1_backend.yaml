@@ -1,5 +1,11 @@
 ---
 caption: Backend
-blocks: []
+subskills: [
+  {caption: 'Python', tools: ['FastAPI', 'Flask']},
+  {caption: 'JavaScript', tools: ['Node.js', 'Express.js', 'Next.js', 'Hono']},
+  {caption: 'Java', tools: ['Spring', 'Spring Boot', 'Java EE']},
+  {caption: 'Messaging', tools: ['Apache Kafka', 'RabbitMQ']},
+  {caption: 'Communication', tools: ['REST', 'OpenAPI/Swagger', 'WebSockets', 'gRPC']},
+]
 ---
 

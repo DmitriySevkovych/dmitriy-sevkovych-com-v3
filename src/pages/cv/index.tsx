@@ -9,7 +9,11 @@ import { CV_EDUCATION_DIR, CV_PROJECTS_DIR, CV_SKILLS_DIR } from '@/lib/utils'
 import { CVData, CVEducationItem, CVProjectItem, CVSkillItem } from '@/model/cv'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { MousePointerClick } from 'lucide-react'
+import {
+    MousePointerClick,
+    Pointer,
+    SquareDashedMousePointer,
+} from 'lucide-react'
 import path from 'path'
 import React from 'react'
 
@@ -96,9 +100,16 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                     what I usually do:
                 </p>
                 <div className="grid grid-cols-1 items-center lg:grid-cols-[10fr_90fr]">
+                    <div className="w-full justify-end lg:hidden">
+                        <SquareDashedMousePointer
+                            className="mx-auto"
+                            strokeOpacity={0.5}
+                            strokeWidth={1}
+                        />
+                    </div>
                     <div className="hidden w-full justify-end lg:flex">
                         <MousePointerClick
-                            className="scale-x-[-1] transform"
+                            className="rotate-90 transform"
                             strokeOpacity={0.5}
                             strokeWidth={1}
                         />

@@ -1,5 +1,10 @@
 ---
 caption: Databases
-blocks: []
+subskills: [
+  {caption: 'SQL', tools: ['PostgreSQL', 'MySQL', 'MS SQL', 'SQLite']},
+  {caption: 'NoSQL', tools: ['Elasticsearch', 'MongoDB', 'Redis', 'RocksDB']},
+  {caption: 'Vector Databases', tools: ['Weaviate', 'Qdrant']},
+  # {caption: 'NoSQL: Columnar Stores', tools: ['Cassandra']},
+]
 ---
 

@@ -28,9 +28,9 @@ export type CVSkillItem = {
     order: number
     caption: string
     // totalExperienceYears: string
-    blocks: {
-        image: string
+    subskills: {
         caption: string
+        tools: string[]
     }[]
 }
 

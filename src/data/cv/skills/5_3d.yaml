@@ -1,5 +1,8 @@
 ---
 caption: 3D
-blocks: []
+subskills: [
+  {caption: 'WebGL', tools: ['Three.js', 'React-Three-Fiber', 'Pixi.js']},
+  {caption: 'Modelling', tools: ['Blender']},
+]
 ---
 
