@@ -50,6 +50,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                             style={tw(
                                 'gap-1 border rounded-lg border-muted min-h-[125pt] p-3 text-sm'
                             )}
+                            wrap={false}
                         >
                             <Text>{`${project.date_from} - ${project.date_until} // ${project.location}`}</Text>
                             <Text
