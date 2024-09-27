@@ -30,7 +30,7 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
     const { education, projects, skills } = cvdata
 
     return (
-        <section className="flex flex-col items-center justify-evenly gap-12">
+        <section className="flex flex-col items-center justify-evenly gap-8">
             {/* CV Page Header */}
             <div className="flex w-full flex-col items-center gap-8">
                 <div className="flex flex-col-reverse items-center justify-evenly gap-8 lg:flex-row lg:gap-16">
@@ -122,22 +122,22 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                 </div>
             </ConstrainedWidthDiv>
 
-            {/* CV Page Projects */}
-            <ConstrainedWidthDiv className="flex flex-col">
-                <h3 className="font-light">Projects</h3>
-                <div className="grid grid-cols-1 gap-5 py-3 lg:grid-cols-2">
-                    {projects.map((project) => (
-                        <Project key={project.order} {...project} />
-                    ))}
-                </div>
-            </ConstrainedWidthDiv>
-
             {/* CV Page Education */}
             <ConstrainedWidthDiv>
                 <h3 className="font-light">Education</h3>
                 <div className="grid grid-cols-1 gap-5 py-3 lg:grid-cols-2">
                     {education.map((edu) => (
                         <Education key={edu.order} {...edu} />
+                    ))}
+                </div>
+            </ConstrainedWidthDiv>
+
+            {/* CV Page Projects */}
+            <ConstrainedWidthDiv className="flex flex-col">
+                <h3 className="font-light">Projects</h3>
+                <div className="grid grid-cols-1 gap-5 py-3 lg:grid-cols-2">
+                    {projects.map((project) => (
+                        <Project key={project.order} {...project} />
                     ))}
                 </div>
             </ConstrainedWidthDiv>
