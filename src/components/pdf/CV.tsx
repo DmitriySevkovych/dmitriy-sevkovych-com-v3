@@ -14,7 +14,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
         creator="Dmitriy Sevkovych"
         language="en"
     >
-        <Page size="A4" style={tw('w-full h-full px-3 py-8')}>
+        <Page size="A4" style={tw('w-full h-full px-3 py-8 font-sans')}>
             {/* Header */}
             <Header />
 
@@ -48,7 +48,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                         <View
                             key={i}
                             style={tw(
-                                'gap-1 border rounded-lg border-muted min-h-[125pt] p-3 text-sm'
+                                'gap-1 border rounded-lg border-muted p-3 text-sm'
                             )}
                             wrap={false}
                         >
@@ -58,13 +58,13 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                             >{`${project.title} @ ${project.client}`}</Text>
                             <Text>{project.description}</Text>
                             {/* <View>
-                                        <Text style={tw('text-lg font-light')}>Responsibilities:</Text>
-                                        {
-                                            project.responsibilities.map((resp, j) => (
-                                                <Text key={`${i}-${j}`} style={tw('text-sm gap-5')}>{resp}</Text>
-                                            ))
-                                        }
-                                    </View> */}
+                                <Text style={tw('text-lg font-light')}>Responsibilities:</Text>
+                                {
+                                    project.responsibilities.map((resp, j) => (
+                                        <Text key={`${i}-${j}`} style={tw('text-sm gap-5')}>{resp}</Text>
+                                    ))
+                                }
+                            </View> */}
                             <Text style={tw('m-auto')}>&mdash;</Text>
                             <Text style={tw('m-auto')}>
                                 {project.techstack
