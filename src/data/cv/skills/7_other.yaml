@@ -5,6 +5,7 @@ subskills: [
   {caption: 'Testing', tools: ['Test-Driven Development', 'JUnit', 'PyTest', 'Jest', 'and many more...']},
   {caption: 'Security', tools: ['Basic Auth', 'Token-based Auth', 'OAuth2', 'OpenID Connect', 'IAM']},
   {caption: 'Payment', tools: ['Stripe']},
+  {caption: 'Project Management', tools: ['Jira', 'Confluence', '...']},
 ]
 ---
 
