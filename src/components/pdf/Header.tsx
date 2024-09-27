@@ -38,7 +38,7 @@ const Header = () => {
                     software project? Lucky you!
                 </Text>
                 <Text>
-                    I am freelance one-man IT department with hands-on
+                    I am a freelance one-man IT department with hands-on
                     professional experience in architecting, developing,
                     deploying and monitoring web applications and machine
                     learning projects.
