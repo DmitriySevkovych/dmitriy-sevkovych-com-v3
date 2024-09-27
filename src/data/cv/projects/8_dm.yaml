@@ -5,7 +5,7 @@ client: "dmTECH GmbH"
 title: "Full-Stack Developer"
 capacity: "4 days/week"
 location: "fully remote"
-description: "Improved point-of-sale applications."
+description: "Improved point-of-sale applications (cashbox and self-checkout)."
 responsibilities:
     [
         "Architectural restructuring of existing services.",
