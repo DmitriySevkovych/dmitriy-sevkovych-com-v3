@@ -109,6 +109,15 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                     ))}
                 </View>
             </View>
+
+            {/* Footer */}
+            <Text
+                style={tw('mx-auto text-sm text-muted font-light')}
+                render={({ pageNumber, totalPages }) =>
+                    `${pageNumber} / ${totalPages}`
+                }
+                fixed
+            />
         </Page>
     </Document>
 )
