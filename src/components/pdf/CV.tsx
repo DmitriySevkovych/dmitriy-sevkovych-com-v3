@@ -42,19 +42,19 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                     </View> */}
 
                 {/* Projects */}
-                <View style={tw('gap-3')}>
-                    <Text style={tw('mb-5')}>Projects</Text>
+                <View style={tw('gap-3 w-[90vw]')}>
+                    <Text style={tw('font-light')}>Projects</Text>
                     {projects.map((project, i) => (
                         <View
                             key={i}
                             style={tw(
-                                'gap-1 border rounded-lg border-muted p-3 text-sm'
+                                'gap-1 border rounded-lg border-muted px-4 py-3 text-sm w-full'
                             )}
                             wrap={false}
                         >
                             <Text>{`${project.date_from} - ${project.date_until} // ${project.location}`}</Text>
                             <Text
-                                style={tw('my-2 text-lg font-medium')}
+                                style={tw('my-1 text-lg font-medium')}
                             >{`${project.title} @ ${project.client}`}</Text>
                             <Text>{project.description}</Text>
                             {/* <View>
