@@ -5,7 +5,7 @@ client: "Multiple clients"
 title: "Website Developer"
 capacity: "depending on project"
 location: "fully remote"
-description: "Development of websites like this one."
+description: "Development of websites like https://dmitriy.sevkovych.com"
 responsibilities: ["Don't know what else to write here. I build websites..."]
 techstack: [
   { image: "icon_html5", caption: "HTML"},
@@ -17,5 +17,6 @@ techstack: [
   { image: "icon_webpack", caption: "Webpack"},
   { image: "icon_nextjs", caption: "Next.js"},
 ]
+# dontPrint: true
 ---
 

@@ -20,5 +20,6 @@ techstack:
         { image: "icon_ms_access", caption: "MS Access" },
         { image: "icon_vba", caption: "VBA" },
     ]
+dontPrint: true
 ---
 

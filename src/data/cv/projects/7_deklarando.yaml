@@ -23,5 +23,6 @@ techstack:
         { image: "icon_bash", caption: "Bash" },
         { image: "icon_sqlite-square", caption: "SQLite" },
     ]
+dontPrint: true
 ---
 

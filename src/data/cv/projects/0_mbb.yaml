@@ -20,5 +20,6 @@ techstack:
         { image: "icon_vba", caption: "VBA" },
         { image: "icon_ms_excel", caption: "MS Excel" },
     ]
+dontPrint: true
 ---
 
