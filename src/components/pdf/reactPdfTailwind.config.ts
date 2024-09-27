@@ -1,7 +1,22 @@
+import { Font } from '@react-pdf/renderer'
 import { createTw } from 'react-pdf-tailwind'
+
+Font.register({
+    family: 'Roboto',
+    fonts: [
+        { src: '/fonts/Roboto/Roboto-Thin.ttf', fontWeight: 100 },
+        { src: '/fonts/Roboto/Roboto-Light.ttf', fontWeight: 300 },
+        { src: '/fonts/Roboto/Roboto-Regular.ttf' },
+        { src: '/fonts/Roboto/Roboto-Medium.ttf', fontWeight: 500 },
+        { src: '/fonts/Roboto/Roboto-Bold.ttf', fontWeight: 700 },
+    ],
+})
 
 export const tw = createTw({
     theme: {
+        fontFamily: {
+            sans: ['Roboto'],
+        },
         container: {
             center: true,
             padding: '2rem',
