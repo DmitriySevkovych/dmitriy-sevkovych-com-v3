@@ -19,7 +19,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
             <Header />
 
             {/* Body */}
-            <View style={tw('self-center mt-10 items-center gap-5')}>
+            <View style={tw('gap-8 self-center items-center mt-10')}>
                 {/* Skills */}
                 <View style={tw('gap-3 w-[90vw]')}>
                     <Text style={tw('font-light')}>Skills</Text>
@@ -33,6 +33,54 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                             })
                             .join('   -   ')}
                     </Text>
+                </View>
+
+                {/* Education */}
+                <View style={tw('gap-3 w-[90vw]')}>
+                    <Text style={tw('font-light')}>Education</Text>
+
+                    <View style={tw('flex-row gap-5 justify-between w-full')}>
+                        {education.map((edu, i) => (
+                            <View
+                                key={i}
+                                style={tw(
+                                    'gap-2 border border-muted rounded-lg text-sm grow px-4 py-3 w-[33vw]'
+                                )}
+                                wrap={false}
+                            >
+                                <Text
+                                    style={tw('text-sm')}
+                                >{`${edu.date_from} - ${edu.date_until} // Stuttgart`}</Text>
+                                <View
+                                    style={tw(
+                                        'mb-2 text-lg font-medium leading-tight'
+                                    )}
+                                >
+                                    <Text>{edu.title}</Text>
+                                    <Text>{`@ ${edu.location}`}</Text>
+                                </View>
+
+                                <View>
+                                    <Text>Focus:</Text>
+                                    {edu.focus.map((item, j) => (
+                                        <Text
+                                            key={`${i}-${j}`}
+                                            style={tw('font-light pl-2')}
+                                        >
+                                            {' >  '}
+                                            {item}
+                                        </Text>
+                                    ))}
+                                </View>
+                                <View style={tw('flex-row gap-1')}>
+                                    <Text>Minor:</Text>
+                                    <Text style={tw('font-light')}>
+                                        {edu.minor}
+                                    </Text>
+                                </View>
+                            </View>
+                        ))}
+                    </View>
                 </View>
 
                 {/* Projects */}
@@ -51,14 +99,6 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                                 style={tw('my-1 text-lg font-medium')}
                             >{`${project.title} @ ${project.client}`}</Text>
                             <Text>{project.description}</Text>
-                            {/* <View>
-                                <Text style={tw('text-lg font-light')}>Responsibilities:</Text>
-                                {
-                                    project.responsibilities.map((resp, j) => (
-                                        <Text key={`${i}-${j}`} style={tw('text-sm gap-5')}>{resp}</Text>
-                                    ))
-                                }
-                            </View> */}
                             <Text style={tw('m-auto')}>&mdash;</Text>
                             <Text style={tw('m-auto')}>
                                 {project.techstack
@@ -68,15 +108,6 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                         </View>
                     ))}
                 </View>
-                {/* Education */}
-                {/* TODO */}
-
-                <Text style={tw('text-muted')}>
-                    CV PDF is still under construction
-                </Text>
-                <Text style={tw('text-muted text-lg')}>
-                    Yours truly, Dmitriy Sevkovych
-                </Text>
             </View>
         </Page>
     </Document>
