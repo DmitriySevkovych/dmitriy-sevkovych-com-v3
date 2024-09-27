@@ -8,21 +8,20 @@ type CVPDFProps = CVData
 
 const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
     <Document
-        title="CV"
-        subject="CV PDF generated from https://dmitriy.sevkovych.com"
+        title="Dmitriy Sevkovych - CV"
+        subject="PDF was generated from https://dmitriy.sevkovych.com"
         author="Dmitriy Sevkovych"
         creator="Dmitriy Sevkovych"
         language="en"
     >
-        <Page size="A4" wrap>
-            <View style={tw('w-full h-full px-3 py-8')}>
-                {/* Header */}
-                <Header />
+        <Page size="A4" style={tw('w-full h-full px-3 py-8')}>
+            {/* Header */}
+            <Header />
 
-                {/* Body */}
-                <View style={tw('self-center mt-10 items-center gap-5')}>
-                    {/* Skills */}
-                    {/* <View style={tw('gap-2')}>
+            {/* Body */}
+            <View style={tw('self-center mt-10 items-center gap-5')}>
+                {/* Skills */}
+                {/* <View style={tw('gap-2')}>
                         {
                             skills.map((skill, i) => (
                                 <View key={i} style={tw('gap-1')} >
@@ -42,22 +41,22 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                         }
                     </View> */}
 
-                    {/* Projects */}
-                    <View style={tw('gap-3')}>
-                        <Text style={tw('mb-5')}>Projects</Text>
-                        {projects.map((project, i) => (
-                            <View
-                                key={i}
-                                style={tw(
-                                    'gap-1 border rounded-lg border-muted min-h-[100px] p-3 text-sm'
-                                )}
-                            >
-                                <Text>{`${project.date_from} - ${project.date_until} // ${project.location}`}</Text>
-                                <Text
-                                    style={tw('my-2 text-lg font-semibold')}
-                                >{`${project.title} @ ${project.client}`}</Text>
-                                <Text>{project.description}</Text>
-                                {/* <View>
+                {/* Projects */}
+                <View style={tw('gap-3')}>
+                    <Text style={tw('mb-5')}>Projects</Text>
+                    {projects.map((project, i) => (
+                        <View
+                            key={i}
+                            style={tw(
+                                'gap-1 border rounded-lg border-muted min-h-[125pt] p-3 text-sm'
+                            )}
+                        >
+                            <Text>{`${project.date_from} - ${project.date_until} // ${project.location}`}</Text>
+                            <Text
+                                style={tw('my-2 text-lg font-medium')}
+                            >{`${project.title} @ ${project.client}`}</Text>
+                            <Text>{project.description}</Text>
+                            {/* <View>
                                         <Text style={tw('text-lg font-light')}>Responsibilities:</Text>
                                         {
                                             project.responsibilities.map((resp, j) => (
@@ -65,24 +64,24 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
                                             ))
                                         }
                                     </View> */}
-                                <Text style={tw('m-auto')}>&mdash;</Text>
-                                <Text style={tw('m-auto')}>
-                                    {project.techstack
-                                        .map((t) => t.caption)
-                                        .join(', ')}
-                                </Text>
-                            </View>
-                        ))}
-                    </View>
-                    {/* Education */}
-                    {/* TODO */}
-                    <Text style={tw('text-muted')}>
-                        CV PDF is still under construction
-                    </Text>
-                    <Text style={tw('text-muted text-lg')}>
-                        Yours truly, Dmitriy Sevkovych
-                    </Text>
+                            <Text style={tw('m-auto')}>&mdash;</Text>
+                            <Text style={tw('m-auto')}>
+                                {project.techstack
+                                    .map((t) => t.caption)
+                                    .join(', ')}
+                            </Text>
+                        </View>
+                    ))}
                 </View>
+                {/* Education */}
+                {/* TODO */}
+
+                <Text style={tw('text-muted')}>
+                    CV PDF is still under construction
+                </Text>
+                <Text style={tw('text-muted text-lg')}>
+                    Yours truly, Dmitriy Sevkovych
+                </Text>
             </View>
         </Page>
     </Document>

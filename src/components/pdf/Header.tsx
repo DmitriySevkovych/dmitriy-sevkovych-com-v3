@@ -6,7 +6,11 @@ import { tw } from './reactPdfTailwind.config'
 
 const Header = () => {
     return (
-        <View style={tw('flex-row justify-evenly items-center gap-5')}>
+        <View
+            style={tw(
+                'flex-row justify-evenly items-center gap-5 min-h-[150pt]'
+            )}
+        >
             {/* Avatar */}
             <View style={tw('flex-row items-center gap-5')}>
                 <Image
