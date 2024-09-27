@@ -30,7 +30,9 @@ const Header = () => {
             </View>
 
             {/* Intro text */}
-            <View style={tw('max-w-[45%] gap-2 text-sm leading-snug')}>
+            <View
+                style={tw('max-w-[45%] gap-2 text-sm leading-snug font-light')}
+            >
                 <Text>
                     You need help with a little bit of everything in your
                     software project? Lucky you!
