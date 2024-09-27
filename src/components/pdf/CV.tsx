@@ -21,25 +21,19 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => (
             {/* Body */}
             <View style={tw('self-center mt-10 items-center gap-5')}>
                 {/* Skills */}
-                {/* <View style={tw('gap-2')}>
-                        {
-                            skills.map((skill, i) => (
-                                <View key={i} style={tw('gap-1')} >
-                                    <Text style={tw('text-lg font-light')}>{skill.caption}</Text>
-                                    <View>
-                                        {
-                                            skill.subskills.map((s, j) => (
-                                                <View key={`${i}-${j}`} style={tw('flex-row text-sm gap-3')}>
-                                                    <Text>{`${s.caption}:`}</Text>
-                                                    <Text>{s.tools.join(', ')}</Text>
-                                                </View>
-                                            ))
-                                        }
-                                    </View>
-                                </View>
-                            ))
-                        }
-                    </View> */}
+                <View style={tw('gap-3 w-[90vw]')}>
+                    <Text style={tw('font-light')}>Skills</Text>
+                    <Text style={tw('text-sm mx-auto')}>
+                        {skills
+                            .map((s) => {
+                                if (s.caption === 'Other') {
+                                    return 'Project Management'
+                                }
+                                return s.caption
+                            })
+                            .join('   -   ')}
+                    </Text>
+                </View>
 
                 {/* Projects */}
                 <View style={tw('gap-3 w-[90vw]')}>

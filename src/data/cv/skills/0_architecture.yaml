@@ -1,5 +1,5 @@
 ---
-caption: Software Architecture
+caption: Architecture
 subskills: [
   {caption: 'Architectures', tools: ['SOA', 'Microservices', 'Event-Driven', 'Hexagonal', 'Onion']},
   {caption: 'APIs', tools: ['REST', 'OpenAPI/Swagger', 'gRPC', 'WebSockets', 'WebHooks']},

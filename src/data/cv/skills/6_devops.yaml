@@ -1,5 +1,5 @@
 ---
-caption: Operations
+caption: DevOps
 subskills: [
   {caption: 'Scripting', tools: ['Bash', 'Python']},
   {caption: 'CI/CD', tools: ['GitHub Actions', 'GitLab-CI', 'Jenkins']},
