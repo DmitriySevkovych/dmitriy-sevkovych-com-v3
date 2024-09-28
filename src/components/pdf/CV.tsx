@@ -116,7 +116,14 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => {
 
                 {/* Footer */}
                 <Text
-                    style={tw('mx-auto text-sm text-muted font-light pt-4')}
+                    style={tw('mx-auto text-sm text-muted font-light pt-8')}
+                    render={() =>
+                        `This document has been generated from my website. Visit https://d.sevkovych.com/cv for more information.`
+                    }
+                    fixed
+                />
+                <Text
+                    style={tw('mx-auto text-sm text-muted font-light pt-2')}
                     render={({ pageNumber, totalPages }) =>
                         `${pageNumber} / ${totalPages}`
                     }
