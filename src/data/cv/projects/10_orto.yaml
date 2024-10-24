@@ -23,7 +23,7 @@ techstack:
         { image: "icon_python", caption: "Python" },
         { image: "icon_bash", caption: "Bash" },
         { image: "icon_apache", caption: "Apache2" },
-        { image: "icon_linux-tux", caption: "Linux LXD" },
+        { image: "icon_linux-containers", caption: "Linux LXD" },
     ]
 ---
 
