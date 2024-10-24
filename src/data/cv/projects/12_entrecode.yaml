@@ -1,0 +1,27 @@
+---
+date_from: "2024-10-21"
+date_until: "ongoing"
+client: "entrecode GmbH"
+title: "Machine Learning Engineer"
+capacity: "part-time"
+location: "fully remote"
+description: "Building a chatbot agent for fitness clubs."
+responsibilities:
+    [
+        "Select and fine-tune ML models.",
+        "Implement chatbot agents.",
+        "Implement conversational RAG agents.",
+        "Implement REST services.",
+        "Set up containerization.",
+        "Deploy the models and the service."
+    ]
+techstack:
+    [
+        { image: "icon_python", caption: "Python" },
+        { image: "icon_langchain", caption: "LangChain" },
+        { image: "icon_huggingface", caption: "HuggingFace" },
+        { image: "icon_fastapi", caption: "FastAPI" },
+        { image: "icon_docker", caption: "Docker" },
+    ]
+---
+
