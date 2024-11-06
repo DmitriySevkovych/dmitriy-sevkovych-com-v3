@@ -20,8 +20,11 @@ techstack:
         { image: "icon_python", caption: "Python" },
         { image: "icon_langchain", caption: "LangChain" },
         { image: "icon_huggingface", caption: "HuggingFace" },
+        { image: "icon_ollama", caption: "Ollama" },
         { image: "icon_fastapi", caption: "FastAPI" },
         { image: "icon_docker", caption: "Docker" },
+        { image: "icon_vllm", caption: "vLLM" },
+        { image: "icon_runpod", caption: "Runpod" },
     ]
 ---
 
