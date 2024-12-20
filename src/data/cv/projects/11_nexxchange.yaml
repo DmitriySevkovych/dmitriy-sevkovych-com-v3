@@ -1,6 +1,6 @@
 ---
 date_from: "2024-10-17"
-date_until: "ongoing"
+date_until: "2024-11-30"
 client: "Nexxchange GmbH"
 title: "Machine Learning Engineer"
 capacity: "part-time"
@@ -11,8 +11,7 @@ responsibilities:
         "Build ML datasets from raw data.",
         "Select and train ML models.",
         "Implement REST service.",
-        "Set up containerization.",
-        "Deploy and run the service."
+        "Set up containerization."
     ]
 techstack:
     [
