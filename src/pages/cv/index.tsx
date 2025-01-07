@@ -31,7 +31,7 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                     <div className="flex items-center gap-5">
                         <Avatar className="h-28 w-28 lg:h-36 lg:w-36">
                             <AvatarImage
-                                src="/sevkovych_portrait_375.png"
+                                src="/images/sevkovych_portrait_375.png"
                                 alt="Dmitriy Sevkovych"
                             />
                             <AvatarFallback>DS</AvatarFallback>
