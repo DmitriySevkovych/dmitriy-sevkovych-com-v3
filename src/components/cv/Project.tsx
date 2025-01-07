@@ -40,11 +40,16 @@ const TechStack: React.FC<Pick<ProjectProps, 'techstack'>> = ({
                         <CarouselItem key={i} className="basis-1/3">
                             <div className="flex h-full flex-col items-center justify-between gap-1">
                                 <div className="m-auto">
+                                    {/* NOTE: some Nextjs-Image hack to avoid annoying console warning */}
                                     <Image
-                                        width={32}
-                                        height={32}
+                                        width={0}
+                                        height={0}
                                         src={`/icons/${tech.image}.svg`}
                                         alt={tech.caption}
+                                        style={{
+                                            width: '32px',
+                                            height: '32px',
+                                        }}
                                     />
                                 </div>
                                 <div className="truncate">{tech.caption}</div>
