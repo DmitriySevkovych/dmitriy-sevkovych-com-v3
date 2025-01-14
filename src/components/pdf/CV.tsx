@@ -71,7 +71,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => {
                                                 key={`${i}-${j}`}
                                                 style={tw('font-light pl-2')}
                                             >
-                                                {' >  '}
+                                                {' -  '}
                                                 {item}
                                             </Text>
                                         ))}
