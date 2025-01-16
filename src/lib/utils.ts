@@ -5,6 +5,8 @@ import { twMerge } from 'tailwind-merge'
 /*
  * Constants
  */
+export const ABOUT_ME_DIR = path.join(process.cwd(), 'src', 'data', 'aboutme')
+
 export const POSTS_DIR = path.join(process.cwd(), 'src', 'data', 'posts')
 
 export const CV_EDUCATION_DIR = path.join(
