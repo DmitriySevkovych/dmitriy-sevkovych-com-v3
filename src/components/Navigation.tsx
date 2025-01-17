@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 
 import { ThemeToggle } from './ThemeToggle'
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 
 type NavigationItemProps = PartiallyRequired<
     React.HTMLProps<HTMLAnchorElement>,
@@ -37,13 +38,15 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 
 const Navigation: React.FC = () => {
     return (
-        <nav className="sticky left-0 top-0 z-50 flex w-full items-center justify-between bg-background p-4 pl-8">
-            <div className="flex items-baseline gap-4 lg:gap-6">
-                <NavigationItem href="/" className="text-xl">
-                    {' '}
-                    Dmitriy&apos;s Website
+        <nav className="sticky left-0 top-0 z-50 flex w-full items-center justify-between bg-background p-2 pl-4 md:p-4 md:pl-8">
+            <div className="flex items-center gap-4 lg:gap-6">
+                <NavigationItem href="/" className="pr-2">
+                    <Avatar>
+                        <AvatarImage src="/images/sevkovych_portrait_375.png" />
+                        <AvatarFallback>DS</AvatarFallback>
+                    </Avatar>
                 </NavigationItem>
-                <NavigationItem href="/blog">Blog</NavigationItem>
+                <NavigationItem href="/blog">My Blog</NavigationItem>
                 <NavigationItem href="/cv">CV</NavigationItem>
             </div>
 
