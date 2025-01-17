@@ -38,7 +38,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 
 const Navigation: React.FC = () => {
     return (
-        <nav className="sticky left-0 top-0 z-50 flex w-full items-center justify-between bg-background p-2 pl-4 md:p-4 md:pl-8">
+        <nav className="sticky left-0 top-0 z-50 mx-4 mb-4 mt-0 flex flex-grow items-center justify-between rounded-sm bg-background p-2 shadow-lg md:mx-8 md:p-4">
             <div className="flex items-center gap-4 lg:gap-6">
                 <NavigationItem href="/" className="pr-2">
                     <Avatar>
