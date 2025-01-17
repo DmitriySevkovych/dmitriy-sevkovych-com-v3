@@ -37,7 +37,7 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 
 const Navigation: React.FC = () => {
     return (
-        <nav className="mb-8 flex w-full items-center justify-between">
+        <nav className="sticky left-0 top-0 z-50 flex w-full items-center justify-between bg-background p-4 pl-8">
             <div className="flex items-baseline gap-4 lg:gap-6">
                 <NavigationItem href="/" className="text-xl">
                     {' '}
