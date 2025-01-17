@@ -3,5 +3,5 @@ export type AboutMeItem = {
     slug: string
     title: string
     imageUrl: string
-    description: string
+    description: string[]
 }

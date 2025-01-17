@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation'
+import { cn, fontSans } from '@/lib/utils'
 import React from 'react'
 
 type DefaultLayoutProps = {
@@ -7,9 +8,12 @@ type DefaultLayoutProps = {
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
     return (
-        <main className="flex min-h-screen w-full flex-col p-6">
+        <main className={cn(fontSans.variable, 'font-sans')}>
             <Navigation />
-            {children}
+
+            <div className="flex min-h-screen w-full flex-col p-6">
+                {children}
+            </div>
         </main>
     )
 }

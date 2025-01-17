@@ -16,12 +16,11 @@ const LandingPageItem: React.FC<AboutMeItem> = ({ title, imageUrl, slug }) => {
             {/* Overlay */}
             <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-20"></div>
             {/* Visible content on top of overlay */}
-            <div className="relative flex h-full w-2/3 items-end justify-start overflow-hidden">
-                <h6 className="translate-y-full p-4 font-bold text-white transition-transform group-hover:-translate-y-0">
+            <div className="relative flex h-full w-3/4 items-end justify-start overflow-hidden">
+                <h6 className="translate-y-0 p-4 font-bold uppercase text-white transition-transform group-hover:-translate-y-5">
                     {title}
                 </h6>
             </div>
-            {/* <span className='inline-block relative top-1/2 left-1/2 hover:translate-x-3'>            {title}            </span> */}
         </Link>
     )
 }
@@ -33,6 +32,8 @@ type LandingPageProps = {
 const LandingPage: NextPageWithLayout<LandingPageProps> = ({ aboutMe }) => {
     return (
         <section className="flex flex-grow items-center justify-center">
+            <div className="absolute hidden h-full w-1/5 bg-background md:block"></div>
+
             <div className="grid grid-cols-2 gap-2 lg:grid-cols-3">
                 {aboutMe.map((item) => (
                     <LandingPageItem key={`aboutme_${item.slug}`} {...item} />

@@ -1,6 +1,17 @@
 import { type ClassValue, clsx } from 'clsx'
+
+/*
+ * Local fonts
+ */
+import { Inter, Open_Sans, Roboto_Mono } from 'next/font/google'
 import path from 'path'
 import { twMerge } from 'tailwind-merge'
+
+export const fontSans = Open_Sans({
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+    variable: '--font-sans',
+})
 
 /*
  * Constants

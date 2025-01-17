@@ -38,9 +38,9 @@ const NavigationItem: React.FC<NavigationItemProps> = ({
 
 const Navigation: React.FC = () => {
     return (
-        <nav className="sticky left-0 top-0 z-50 mx-4 mb-4 mt-0 flex flex-grow items-center justify-between rounded-sm bg-background p-2 shadow-lg md:mx-8 md:p-4">
+        <nav className="sticky left-0 top-0 z-50 mb-4 mt-0 flex flex-grow items-center justify-between bg-background/70 p-2 shadow-lg md:px-6 md:py-4">
             <div className="flex items-center gap-4 lg:gap-6">
-                <NavigationItem href="/" className="pr-2">
+                <NavigationItem href="/" className="pl-4 pr-2 md:pl-0">
                     <Avatar>
                         <AvatarImage src="/images/sevkovych_portrait_375.png" />
                         <AvatarFallback>DS</AvatarFallback>

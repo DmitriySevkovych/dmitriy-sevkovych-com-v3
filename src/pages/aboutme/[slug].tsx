@@ -13,16 +13,27 @@ type AboutMePageProps = {
 }
 
 const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
-    const { title, imageUrl } = aboutMe
+    const { title, imageUrl, description } = aboutMe
     return (
         <section
             className="flex flex-grow bg-cover bg-center"
             style={{ backgroundImage: `url(${imageUrl})` }}
         >
-            <div className="absolute right-1/2 top-2/3 inline-block">
-                <h1 className="bg-white p-3 text-5xl font-bold opacity-75">
+            {/* Overlay */}
+            <div className="absolute h-full w-full bg-black/10"></div>
+
+            <div className="absolute hidden h-full w-1/5 bg-accent md:block"></div>
+
+            <div className="absolute left-8 top-[60%] flex flex-col items-baseline gap-4 pr-8 md:gap-8">
+                <h1 className="bg-accent p-3 text-xl font-bold uppercase text-white lg:text-5xl">
                     {title}
                 </h1>
+                <div className="flex w-full flex-col gap-2 bg-background p-3 md:w-2/3">
+                    {description.map((item, index) => (
+                        <p key={`${title}-${index}`}>{item}</p>
+                    ))}
+                </div>
+                {/* <p className='bg-background p-3 w-full md:w-2/3'>{description}</p> */}
             </div>
         </section>
     )
