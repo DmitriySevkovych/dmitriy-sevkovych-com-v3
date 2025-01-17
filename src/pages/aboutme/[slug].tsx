@@ -11,10 +11,17 @@ type AboutMePageProps = {
 }
 
 const AboutMePage: React.FC<AboutMePageProps> = ({ aboutMe }) => {
-    const { title } = aboutMe
+    const { title, imageUrl } = aboutMe
     return (
-        <section>
-            <h1>{title}</h1>
+        <section
+            className="flex flex-grow bg-cover bg-center"
+            style={{ backgroundImage: `url(${imageUrl})` }}
+        >
+            <div className="absolute right-1/2 top-2/3 inline-block">
+                <h1 className="bg-white p-3 text-5xl font-bold opacity-75">
+                    {title}
+                </h1>
+            </div>
         </section>
     )
 }
