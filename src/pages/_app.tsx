@@ -1,19 +1,25 @@
-import Navigation from '@/components/Navigation'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import DefaultLayout from '@/layouts/DefaultLayout'
+import { NextPageWithLayout } from '@/layouts/types'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
+type AppPropsWithLayout = AppProps & {
+    Component: NextPageWithLayout<any>
+}
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+    // Use the layout defined at the page level, if available
+    const getLayout =
+        Component.getLayout ?? ((page) => <DefaultLayout>{page}</DefaultLayout>)
+
     return (
         <ThemeProvider
             attribute="class"
             defaultTheme="light"
             disableTransitionOnChange
         >
-            <main className="flex min-h-screen w-full flex-col p-6">
-                <Navigation />
-                <Component {...pageProps} />
-            </main>
+            {getLayout(<Component {...pageProps} />)}
         </ThemeProvider>
     )
 }

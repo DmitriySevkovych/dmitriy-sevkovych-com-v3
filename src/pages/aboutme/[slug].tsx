@@ -1,16 +1,18 @@
+import LandingLayout from '@/layouts/LandingLayout'
+import { NextPageWithLayout } from '@/layouts/types'
 import { readDataFromFiles } from '@/lib/server_utils'
 import { ABOUT_ME_DIR, toSlug } from '@/lib/utils'
 import { AboutMeItem } from '@/model/aboutme'
-import { Item } from '@radix-ui/react-accordion'
 import fs from 'fs'
 import { GetStaticProps } from 'next'
 import { ParsedUrlQuery } from 'querystring'
+import { ReactElement } from 'react'
 
 type AboutMePageProps = {
     aboutMe: AboutMeItem
 }
 
-const AboutMePage: React.FC<AboutMePageProps> = ({ aboutMe }) => {
+const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
     const { title, imageUrl } = aboutMe
     return (
         <section
@@ -24,6 +26,10 @@ const AboutMePage: React.FC<AboutMePageProps> = ({ aboutMe }) => {
             </div>
         </section>
     )
+}
+
+AboutMePage.getLayout = function getLayout(page: ReactElement) {
+    return <LandingLayout>{page}</LandingLayout>
 }
 
 export const getStaticPaths = async () => {

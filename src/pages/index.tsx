@@ -1,7 +1,10 @@
+import LandingLayout from '@/layouts/LandingLayout'
+import { NextPageWithLayout } from '@/layouts/types'
 import { readDataFromFiles } from '@/lib/server_utils'
 import { ABOUT_ME_DIR } from '@/lib/utils'
 import { AboutMeItem } from '@/model/aboutme'
 import Link from 'next/link'
+import { ReactElement } from 'react'
 
 const LandingPageItem: React.FC<AboutMeItem> = ({ title, imageUrl, slug }) => {
     return (
@@ -27,7 +30,7 @@ type LandingPageProps = {
     aboutMe: AboutMeItem[]
 }
 
-const LandingPage: React.FC<LandingPageProps> = ({ aboutMe }) => {
+const LandingPage: NextPageWithLayout<LandingPageProps> = ({ aboutMe }) => {
     return (
         <section className="flex flex-grow items-center justify-center">
             <div className="grid grid-cols-2 gap-2 lg:grid-cols-3">
@@ -37,6 +40,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ aboutMe }) => {
             </div>
         </section>
     )
+}
+
+LandingPage.getLayout = function getLayout(page: ReactElement) {
+    return <LandingLayout>{page}</LandingLayout>
 }
 
 export const getStaticProps = async () => {
