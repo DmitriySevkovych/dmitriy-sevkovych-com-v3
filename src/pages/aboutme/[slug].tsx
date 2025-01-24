@@ -24,8 +24,8 @@ const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
 
             <div className="absolute hidden h-full w-1/5 bg-accent md:block"></div>
 
-            <div className="absolute left-8 top-[60%] flex flex-col items-baseline gap-4 pr-8 md:gap-8">
-                <h1 className="bg-accent p-3 text-xl font-bold uppercase text-white lg:text-5xl">
+            <div className="absolute bottom-[5%] left-8 flex flex-col items-baseline gap-4 pr-8 md:gap-8">
+                <h1 className="max-w-[650px] bg-accent p-3 text-right text-xl font-bold uppercase text-white lg:text-5xl">
                     {title}
                 </h1>
                 <div className="flex w-full flex-col gap-2 bg-background p-3 md:w-2/3">
@@ -33,7 +33,6 @@ const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
                         <p key={`${title}-${index}`}>{item}</p>
                     ))}
                 </div>
-                {/* <p className='bg-background p-3 w-full md:w-2/3'>{description}</p> */}
             </div>
         </section>
     )

@@ -28,9 +28,7 @@ const LandingLayout: React.FC<LandingLayoutProps> = ({ children }) => {
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 300, opacity: 0 }}
                     transition={{
-                        type: 'spring',
-                        stiffness: 260,
-                        damping: 20,
+                        type: 'ease-in-out',
                     }}
                 >
                     {children}

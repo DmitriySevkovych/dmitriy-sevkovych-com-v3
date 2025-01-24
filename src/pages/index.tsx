@@ -1,10 +1,3 @@
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from '@/components/ui/carousel'
 import LandingLayout from '@/layouts/LandingLayout'
 import { NextPageWithLayout } from '@/layouts/types'
 import { readDataFromFiles } from '@/lib/server_utils'
@@ -17,7 +10,7 @@ const LandingPageItem: React.FC<AboutMeItem> = ({ title, imageUrl, slug }) => {
     return (
         <Link
             href={`/aboutme/${slug}`}
-            className="group h-[420px] w-[260px] rounded-sm bg-white shadow-lg"
+            className="group h-[420px] w-[260px] rounded-lg bg-white shadow-xl"
         >
             {/* Image */}
             <div
@@ -28,7 +21,6 @@ const LandingPageItem: React.FC<AboutMeItem> = ({ title, imageUrl, slug }) => {
                 <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-20"></div>
             </div>
 
-            {/* <div className='flex flex-col items-center justify-center'> */}
             <h6
                 className={cn(
                     fontMono.variable,
@@ -37,7 +29,6 @@ const LandingPageItem: React.FC<AboutMeItem> = ({ title, imageUrl, slug }) => {
             >
                 {title}
             </h6>
-            {/* </div> */}
         </Link>
     )
 }
@@ -48,20 +39,8 @@ type LandingPageProps = {
 
 const LandingPage: NextPageWithLayout<LandingPageProps> = ({ aboutMe }) => {
     return (
-        <section className="flex flex-grow items-center justify-center">
-            {/* <Carousel className=''>
-                <CarouselContent>
-                    {aboutMe.map((item) => (
-                        <CarouselItem key={`aboutme_${item.slug}`} className=' p-20 pl-4 min-h-[420px] lg:basis-1/4'>
-                            <LandingPageItem {...item} />
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-            </Carousel> */}
-
-            <div className="mt-20 grid grid-cols-1 gap-5 lg:grid-cols-3">
+        <section className="flex flex-grow flex-col items-center justify-center pt-20">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
                 {aboutMe.map((item) => (
                     <LandingPageItem key={`aboutme_${item.slug}`} {...item} />
                 ))}
