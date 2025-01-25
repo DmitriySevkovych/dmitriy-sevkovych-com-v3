@@ -1,10 +1,29 @@
 import { type ClassValue, clsx } from 'clsx'
+
+/*
+ * Local fonts
+ */
+import { Open_Sans, Roboto_Mono } from 'next/font/google'
 import path from 'path'
 import { twMerge } from 'tailwind-merge'
+
+export const fontSans = Open_Sans({
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+    variable: '--font-sans',
+})
+
+export const fontMono = Roboto_Mono({
+    subsets: ['latin', 'cyrillic'],
+    display: 'swap',
+    variable: '--font-mono',
+})
 
 /*
  * Constants
  */
+export const ABOUT_ME_DIR = path.join(process.cwd(), 'src', 'data', 'aboutme')
+
 export const POSTS_DIR = path.join(process.cwd(), 'src', 'data', 'posts')
 
 export const CV_EDUCATION_DIR = path.join(

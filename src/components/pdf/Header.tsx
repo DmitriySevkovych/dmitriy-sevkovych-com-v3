@@ -11,7 +11,7 @@ const Header = () => {
             <View style={tw('flex-row items-center gap-5')}>
                 <Image
                     style={tw('h-28 w-28 rounded-full')}
-                    src="/sevkovych_portrait_375.png"
+                    src="/images/sevkovych_portrait_375.png"
                 />
                 <View>
                     <Text style={tw('text-xl leading-snug')}>
