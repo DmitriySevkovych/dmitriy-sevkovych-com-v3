@@ -10,21 +10,21 @@ const LandingPageItem: React.FC<AboutMeItem> = ({ title, imageUrl, slug }) => {
     return (
         <Link
             href={`/aboutme/${slug}`}
-            className="group h-[420px] w-[260px] rounded-lg bg-white shadow-xl"
+            className="group flex h-[420px] w-[260px] flex-col justify-between rounded-lg border bg-white shadow-xl"
         >
             {/* Image */}
             <div
-                className="relative m-5 h-3/4 bg-cover bg-center"
+                className="relative mx-5 mt-5 h-3/4 bg-cover bg-center saturate-0 transition-all hover:saturate-100"
                 style={{ backgroundImage: `url(${imageUrl})` }}
             >
                 {/* Image Overlay */}
-                <div className="absolute inset-0 bg-black opacity-50 transition-opacity group-hover:opacity-20"></div>
+                <div className="absolute inset-0 bg-gray-400 opacity-20 transition-opacity group-hover:opacity-0"></div>
             </div>
 
             <h6
                 className={cn(
                     fontMono.variable,
-                    'translate-y-0 p-4 text-center font-mono font-bold uppercase text-black/90 transition-transform group-hover:-translate-y-2'
+                    'h-[60px] translate-y-0 text-center font-mono font-bold uppercase text-black/90 transition-transform group-hover:-translate-y-2'
                 )}
             >
                 {title}
@@ -39,18 +39,14 @@ type LandingPageProps = {
 
 const LandingPage: NextPageWithLayout<LandingPageProps> = ({ aboutMe }) => {
     return (
-        <section className="flex flex-grow flex-col items-center justify-center pt-20">
-            <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+        <section className="flex flex-grow flex-col items-center justify-center pt-2">
+            <div className="grid grid-cols-1 gap-5 pb-6 lg:grid-cols-3">
                 {aboutMe.map((item) => (
                     <LandingPageItem key={`aboutme_${item.slug}`} {...item} />
                 ))}
             </div>
         </section>
     )
-}
-
-LandingPage.getLayout = function getLayout(page: ReactElement) {
-    return <LandingLayout>{page}</LandingLayout>
 }
 
 export const getStaticProps = async () => {
