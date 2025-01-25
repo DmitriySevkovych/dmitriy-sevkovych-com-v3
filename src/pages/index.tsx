@@ -49,6 +49,11 @@ const LandingPage: NextPageWithLayout<LandingPageProps> = ({ aboutMe }) => {
     )
 }
 
+// TODO: improve layout
+// LandingPage.getLayout = function getLayout(page: ReactElement) {
+//     return <LandingLayout>{page}</LandingLayout>
+// }
+
 export const getStaticProps = async () => {
     return {
         props: {
