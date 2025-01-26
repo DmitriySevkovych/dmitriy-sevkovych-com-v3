@@ -49,7 +49,7 @@ const LandingPage: NextPageWithLayout<LandingPageProps> = ({ aboutMe }) => {
     )
 }
 
-// TODO: improve layout
+// TODO improve layout
 // LandingPage.getLayout = function getLayout(page: ReactElement) {
 //     return <LandingLayout>{page}</LandingLayout>
 // }

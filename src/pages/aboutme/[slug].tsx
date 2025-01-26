@@ -38,10 +38,9 @@ const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
     )
 }
 
-// TODO: improve layout
-// AboutMePage.getLayout = function getLayout(page: ReactElement) {
-//     return <LandingLayout>{page}</LandingLayout>
-// }
+AboutMePage.getLayout = function getLayout(page: ReactElement) {
+    return <LandingLayout>{page}</LandingLayout>
+}
 
 export const getStaticPaths = async () => {
     const files = fs.readdirSync(ABOUT_ME_DIR)
