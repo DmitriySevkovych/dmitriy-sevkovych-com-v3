@@ -28,7 +28,7 @@ const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
                 <h1 className="max-w-[650px] bg-accent p-3 text-right text-xl font-bold uppercase text-white lg:text-5xl">
                     {title}
                 </h1>
-                <div className="flex w-full flex-col gap-2 bg-background p-3 md:w-2/3">
+                <div className="flex max-h-[300px] w-full flex-col gap-2 overflow-y-auto bg-background p-3 md:w-2/3">
                     {description.map((item, index) => (
                         <p key={`${title}-${index}`}>{item}</p>
                     ))}
