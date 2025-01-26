@@ -1,7 +1,7 @@
 import LandingLayout from '@/layouts/LandingLayout'
 import { NextPageWithLayout } from '@/layouts/types'
 import { readDataFromFiles } from '@/lib/server_utils'
-import { ABOUT_ME_DIR, toSlug } from '@/lib/utils'
+import { ABOUT_ME_DIR, cn, fontMono, toSlug } from '@/lib/utils'
 import { AboutMeItem } from '@/model/aboutme'
 import fs from 'fs'
 import { GetStaticProps } from 'next'
@@ -25,12 +25,19 @@ const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
             <div className="absolute hidden h-full w-1/5 bg-accent md:block"></div>
 
             <div className="absolute bottom-[5%] left-8 flex flex-col items-baseline gap-4 pr-8 md:gap-8">
-                <h1 className="max-w-[650px] bg-accent p-3 text-right text-xl font-bold uppercase text-white lg:text-5xl">
+                <h1
+                    className={cn(
+                        fontMono.variable,
+                        'max-w-[650px] bg-accent px-6 py-3 text-right font-mono text-xl font-bold uppercase text-white lg:text-5xl'
+                    )}
+                >
                     {title}
                 </h1>
-                <div className="flex max-h-[300px] w-full flex-col gap-2 overflow-y-auto bg-background p-3 md:w-2/3">
+                <div className="flex max-h-[300px] w-full flex-col gap-2 overflow-y-auto bg-background p-6 opacity-95 md:w-2/3">
                     {description.map((item, index) => (
-                        <p key={`${title}-${index}`}>{item}</p>
+                        <p key={`${title}-${index}`} className="pb-1">
+                            {item}
+                        </p>
                     ))}
                 </div>
             </div>

@@ -3,11 +3,11 @@ import { type ClassValue, clsx } from 'clsx'
 /*
  * Local fonts
  */
-import { Open_Sans, Roboto_Mono } from 'next/font/google'
+import { Fira_Code, Roboto_Mono } from 'next/font/google'
 import path from 'path'
 import { twMerge } from 'tailwind-merge'
 
-export const fontSans = Open_Sans({
+export const fontSans = Fira_Code({
     subsets: ['latin', 'cyrillic'],
     display: 'swap',
     variable: '--font-sans',
