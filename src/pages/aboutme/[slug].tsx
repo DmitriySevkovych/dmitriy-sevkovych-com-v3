@@ -16,15 +16,15 @@ const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
     const { title, imageUrl, description } = aboutMe
     return (
         <section
-            className="flex flex-grow bg-cover bg-center"
+            className="flex flex-grow items-end bg-cover bg-center"
             style={{ backgroundImage: `url(${imageUrl})` }}
         >
             {/* Overlay */}
             <div className="absolute h-full w-full bg-black/10"></div>
 
-            <div className="absolute hidden h-full w-1/5 bg-accent md:block"></div>
+            {/* <div className="absolute hidden h-full w-1/5 bg-accent md:block"></div> */}
 
-            <div className="absolute bottom-[5%] left-8 flex flex-col items-baseline gap-4 pr-8 md:gap-8">
+            <div className="flex flex-col items-baseline gap-4 p-8 md:gap-8">
                 <h1
                     className={cn(
                         fontMono.variable,
