@@ -22,8 +22,6 @@ const AboutMePage: NextPageWithLayout<AboutMePageProps> = ({ aboutMe }) => {
             {/* Overlay */}
             <div className="absolute h-full w-full bg-black/10"></div>
 
-            {/* <div className="absolute hidden h-full w-1/5 bg-accent md:block"></div> */}
-
             <div className="flex flex-col items-baseline gap-4 p-8 md:gap-8">
                 <h1
                     className={cn(
