@@ -23,7 +23,12 @@ export type CVProjectItem = {
         caption: string
     }[]
     dontPrint?: boolean
-    images?: string[]
+    images?: {
+        src: string
+        alt: string
+        width: number
+        height: number
+    }[]
 }
 
 export type CVSkillItem = {

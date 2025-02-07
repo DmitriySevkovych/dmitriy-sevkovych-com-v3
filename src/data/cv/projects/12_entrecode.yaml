@@ -13,7 +13,7 @@ responsibilities:
         "Implement conversational RAG agents.",
         "Implement REST services.",
         "Set up containerization.",
-        "Deploy the models and the service."
+        "Deploy the models and the service.",
     ]
 techstack:
     [
@@ -25,6 +25,15 @@ techstack:
         { image: "icon_docker", caption: "Docker" },
         { image: "icon_vllm", caption: "vLLM" },
         { image: "icon_runpod", caption: "Runpod" },
+    ]
+images:
+    [
+        {
+            src: "entrecode_1.png",
+            alt: "LangChain RAG chatbot conversation",
+            width: 500,
+            height: 376,
+        },
     ]
 ---
 

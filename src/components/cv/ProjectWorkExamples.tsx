@@ -113,16 +113,17 @@ const WorkExamples: React.FC<Pick<CVProjectItem, 'images' | 'client'>> = ({
                 >
                     <CarouselContent>
                         {images.map((image, index) => (
-                            <CarouselItem key={index}>
+                            <CarouselItem key={index} className="flex">
                                 <Link
+                                    className="mx-auto"
                                     target="_blank"
-                                    href={`/images/projects/${image}`}
+                                    href={`/images/projects/${image.src}`}
                                 >
                                     <Image
-                                        src={`/images/projects/${image}`}
-                                        alt={image}
-                                        width={1920}
-                                        height={878}
+                                        src={`/images/projects/${image.src}`}
+                                        alt={image.alt}
+                                        width={image.width}
+                                        height={image.height}
                                     />
                                 </Link>
                             </CarouselItem>
