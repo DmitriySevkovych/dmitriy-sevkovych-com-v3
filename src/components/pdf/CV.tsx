@@ -16,14 +16,14 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => {
             creator="Dmitriy Sevkovych"
             language="en"
         >
-            <Page size="A4" style={tw('w-full h-full px-3 py-6 font-sans')}>
+            <Page size="A4" style={tw('w-full h-full p-12 font-sans')}>
                 {/* Header */}
                 <Header />
 
                 {/* Body */}
-                <View style={tw('gap-6 self-center items-center mt-6')}>
+                <View style={tw('gap-12 self-center items-center mt-6')}>
                     {/* Skills */}
-                    <View style={tw('gap-3 w-[90vw]')}>
+                    <View style={tw('gap-4 w-[90vw]')}>
                         <Text style={tw('font-light')}>Skills</Text>
                         <Text style={tw('text-sm mx-auto')}>
                             {skills
@@ -38,7 +38,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => {
                     </View>
 
                     {/* Education */}
-                    <View style={tw('gap-3 w-[90vw]')}>
+                    <View style={tw('gap-4 w-[90vw]')}>
                         <Text style={tw('font-light')}>Education</Text>
 
                         <View
@@ -88,7 +88,7 @@ const CVPDF: React.FC<CVPDFProps> = ({ education, projects, skills }) => {
                     </View>
 
                     {/* Projects */}
-                    <View style={tw('gap-3 w-[90vw]')}>
+                    <View style={tw('gap-4 w-[90vw]')}>
                         <Text style={tw('font-light')}>Projects</Text>
                         {projectsToPrint.map((project, i) => (
                             <View
