@@ -25,5 +25,11 @@ techstack:
         { image: "icon_apache", caption: "Apache2" },
         { image: "icon_linux-containers", caption: "Linux LXD" },
     ]
+images: 
+    [
+        "orto_1.png",
+        "orto_2.png",
+        "orto_3.png",
+    ]
 ---
 
