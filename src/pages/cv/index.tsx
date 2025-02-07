@@ -5,6 +5,12 @@ import Skill from '@/components/cv/Skill'
 import CVPDF from '@/components/pdf/CV'
 import DownloadButton from '@/components/pdf/DownloadButton'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from '@/components/ui/tooltip'
 import { readDataFromFiles } from '@/lib/server_utils'
 import { CV_EDUCATION_DIR, CV_PROJECTS_DIR, CV_SKILLS_DIR } from '@/lib/utils'
 import { CVData, CVEducationItem, CVProjectItem, CVSkillItem } from '@/model/cv'
@@ -94,20 +100,30 @@ const CVPage: React.FC<CVPageProps> = ({ cvdata }) => {
                     what I usually do:
                 </p>
                 <div className="grid grid-cols-1 items-center lg:grid-cols-[10fr_90fr]">
-                    <div className="w-full justify-end lg:hidden">
-                        <SquareDashedMousePointer
-                            className="mx-auto"
-                            strokeOpacity={0.5}
-                            strokeWidth={1}
-                        />
-                    </div>
-                    <div className="hidden w-full justify-end lg:flex">
-                        <MousePointerClick
-                            className="rotate-90 transform"
-                            strokeOpacity={0.5}
-                            strokeWidth={1}
-                        />
-                    </div>
+                    <TooltipProvider>
+                        <Tooltip>
+                            <div className="w-full justify-end lg:hidden">
+                                <SquareDashedMousePointer
+                                    className="mx-auto"
+                                    strokeOpacity={0.5}
+                                    strokeWidth={1}
+                                />
+                            </div>
+                            <TooltipTrigger asChild>
+                                <div className="hidden w-full justify-end lg:flex">
+                                    <MousePointerClick
+                                        className="rotate-90 transform"
+                                        strokeOpacity={0.5}
+                                        strokeWidth={1}
+                                    />
+                                </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>Click on the skills for further details🚀</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+
                     <div className="grid grid-cols-2 gap-2 py-3 lg:grid-cols-4">
                         {skills.map((skill) => (
                             <Skill key={skill.order} {...skill} />
