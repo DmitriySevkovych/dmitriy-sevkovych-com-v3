@@ -13,6 +13,8 @@ import {
     CardTitle,
 } from '../ui/card'
 import { Carousel, CarouselContent, CarouselItem } from '../ui/carousel'
+import { TooltipProvider } from '../ui/tooltip'
+import WorkExamples from './ProjectWorkExamples'
 
 type ProjectProps = CVProjectItem
 
@@ -26,7 +28,6 @@ const TechStack: React.FC<Pick<ProjectProps, 'techstack'>> = ({
             <p className="mb-5 font-medium">Tech Stack</p>
             <Carousel
                 opts={{
-                    // align: "start",
                     loop: true,
                 }}
                 plugins={[
@@ -91,24 +92,30 @@ const Project: React.FC<ProjectProps> = ({
     description,
     responsibilities,
     techstack,
+    images,
 }) => {
     return (
-        <Card className="flex flex-col">
-            <CardHeader>
-                <CardDescription>{`${date_from} - ${date_until} // ${location}`}</CardDescription>
-                <CardTitle className="flex flex-col">
-                    <div className="text-xl">{title}</div>
-                    <div className="text-lg">{`@ ${client}`}</div>
-                </CardTitle>
-            </CardHeader>
-            <CardContent className="flex-grow">
-                <p>{description}</p>
-                <Responsibilities responsibilities={responsibilities} />
-            </CardContent>
-            <CardFooter>
-                <TechStack techstack={techstack} />
-            </CardFooter>
-        </Card>
+        <TooltipProvider>
+            <Card className="flex flex-col">
+                <CardHeader>
+                    <CardDescription className="flex h-[24px] items-center justify-between">
+                        <span>{`${date_from} - ${date_until} // ${location}`}</span>
+                        <WorkExamples images={images} client={client} />
+                    </CardDescription>
+                    <CardTitle className="flex flex-col">
+                        <div className="text-xl">{title}</div>
+                        <div className="text-lg">{`@ ${client}`}</div>
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                    <p>{description}</p>
+                    <Responsibilities responsibilities={responsibilities} />
+                </CardContent>
+                <CardFooter>
+                    <TechStack techstack={techstack} />
+                </CardFooter>
+            </Card>
+        </TooltipProvider>
     )
 }
 
