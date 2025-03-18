@@ -5,7 +5,7 @@ client: "orto GmbH"
 title: "Frontend & 3D Engineer"
 capacity: "part-time"
 location: "fully remote"
-description: "Building an 3D tool for architects to work with Lidar pointclouds."
+description: "Building an 3D tool for architects to work with Lidar pointclouds and photographic data."
 responsibilities:
     [
         "Implement 3D panorama tours.",
