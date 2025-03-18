@@ -34,7 +34,19 @@ images:
             src: "entrecode_1.png",
             alt: "LangChain RAG chatbot conversation",
             width: 500,
-            height: 376,
+            height: 440,
+        },
+        {
+            src: "entrecode_2.png",
+            alt: "LangChain RAG chatbot conversation",
+            width: 500,
+            height: 440,
+        },
+        {
+            src: "entrecode_3.png",
+            alt: "LangChain RAG chatbot conversation",
+            width: 500,
+            height: 440,
         },
     ]
 ---
