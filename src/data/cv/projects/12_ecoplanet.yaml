@@ -1,0 +1,29 @@
+---
+date_from: "2025-03-11"
+date_until: "ongoing"
+client: "EcoPlanet Green Operations GmbH"
+title: "Full-Stack Web + AI Engineer"
+capacity: "part-time"
+location: "fully remote"
+description: "Helping a VC funded EnergyTech startup transform its IT to scale out to mass adoption."
+responsibilities:
+    [
+        "Proposing software architecture improvements.",
+        "Delivering scalable, cloud-native applications.",
+        "Implementing new features, bug fixing, refactoring.",
+        "Revamping AI solution towards proprietary LLM agents.",
+    ]
+techstack:
+    [
+        { image: "icon_typescript_bg", caption: "TypeScript" },
+        { image: "icon_nestjs", caption: "Nest.js" },
+        { image: "icon_postgresql", caption: "PostgreSQL" },
+        { image: "icon_kafka", caption: "Kafka" },
+        { image: "icon_openai", caption: "OpenAI" },
+        { image: "icon_langchain", caption: "LangChain" },
+        { image: "icon_kubernetes", caption: "Kubernetes" },
+        { image: "icon_nginx", caption: "NGINX" },
+        { image: "icon_sentry", caption: "Sentry" },
+    ]
+---
+
