@@ -16,6 +16,7 @@ responsibilities:
 techstack:
     [
         { image: "icon_typescript_bg", caption: "TypeScript" },
+        { image: "icon_react", caption: "React.js" },
         { image: "icon_nestjs", caption: "Nest.js" },
         { image: "icon_postgresql", caption: "PostgreSQL" },
         { image: "icon_kafka", caption: "Kafka" },
