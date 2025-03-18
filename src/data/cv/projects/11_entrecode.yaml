@@ -1,29 +1,31 @@
 ---
 date_from: "2024-10-21"
-date_until: "ongoing"
+date_until: "2025-02-28"
 client: "Entrecode GmbH"
 title: "Machine Learning Engineer"
 capacity: "part-time"
 location: "fully remote"
-description: "Building a chatbot agent for fitness clubs."
+description: "Built, launched and handed off a virtual personal fitness assistant."
 responsibilities:
     [
-        "Select and fine-tune ML models.",
-        "Implement chatbot agents.",
-        "Implement conversational RAG agents.",
-        "Implement REST services.",
+        "Selected and fine-tuned ML models.",
+        "Implemented chatbot agents.",
+        "Implemented conversational RAG agents.",
+        "Implemented REST services.",
         "Set up containerization.",
-        "Deploy the models and the service.",
+        "Deployed the models and the service.",
     ]
 techstack:
     [
         { image: "icon_python", caption: "Python" },
         { image: "icon_langchain", caption: "LangChain" },
         { image: "icon_huggingface", caption: "HuggingFace" },
+        { image: "icon_openai", caption: "OpenAI" },
         { image: "icon_ollama", caption: "Ollama" },
+        { image: "icon_qdrant", caption: "Qdrant" },
         { image: "icon_fastapi", caption: "FastAPI" },
         { image: "icon_docker", caption: "Docker" },
-        { image: "icon_vllm", caption: "vLLM" },
+        { image: "icon_kubernetes", caption: "Kubernetes" },
         { image: "icon_runpod", caption: "Runpod" },
     ]
 images:
