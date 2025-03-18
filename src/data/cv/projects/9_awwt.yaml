@@ -8,9 +8,9 @@ location: "fully remote"
 description: "Responsible for all backend and AI components of an artwork shopping platform."
 responsibilities:
     [
+        "Built and launched multi-modal semantic search.",
+        "Built and launched artwork recommender system.",
         "Consulted on architectural decisions.",
-        "Implemented multi-modal semantic search.",
-        "Implemented a recommender system.",
         "Implemented REST services.",
         "Set up containerization.",
         "Set up monitoring.",
@@ -28,6 +28,7 @@ techstack:
         { image: "icon_docker", caption: "Docker" },
         { image: "icon_kubernetes", caption: "Kubernetes" },
         { image: "icon_aws", caption: "AWS" },
+        { image: "icon_sentry", caption: "Sentry" },
     ]
 ---
 
