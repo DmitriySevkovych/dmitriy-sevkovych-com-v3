@@ -2,28 +2,31 @@
 date_from: "2025-03-11"
 date_until: "ongoing"
 client: "EcoPlanet Green Operations GmbH"
-title: "Lead AI Engineer"
+title: "Principal AI Engineer"
 capacity: "part-time"
 location: "fully remote"
 description: "Helping a VC-funded EnergyTech startup scale out to unicorn valuation."
 responsibilities:
     [
-        "Reimplemented a personal virtual assistant solution (7x performance improvement).",
-        "Virtual assistant rolled out to the entire customer base.",
-        "Consulting on architecture topics.",
-        "Delivering scalable, cloud-native applications.",
+        "Reimplemented talk-to-your-data AI assistant (~7x performance improvement).",
+        "Implemented multi-agent AI system for report generation.", 
+        "Implemented multi-agent AI system for insight detection and generation of energy saving measures.",
+        "Consulted on overarching architecture topics.",
+        "Delivered scalable, cloud-native applications.",
+        "Introduced team collaboration best-practices.",
     ]
 techstack:
     [
+        { image: "icon_langchain", caption: "LangChain" },
+        { image: "icon_openai", caption: "OpenAI" },
+        { image: "icon_claude", caption: "Claude" },
+        { image: "icon_python", caption: "Python" },
         { image: "icon_typescript_bg", caption: "TypeScript" },
-        { image: "icon_react", caption: "React.js" },
         { image: "icon_nestjs", caption: "Nest.js" },
+        { image: "icon_react", caption: "React.js" },
         { image: "icon_postgresql", caption: "PostgreSQL" },
         { image: "icon_kafka", caption: "Kafka" },
-        { image: "icon_openai", caption: "OpenAI" },
-        { image: "icon_langchain", caption: "LangChain" },
         { image: "icon_kubernetes", caption: "Kubernetes" },
-        { image: "icon_nginx", caption: "NGINX" },
         { image: "icon_sentry", caption: "Sentry" },
     ]
 ---
