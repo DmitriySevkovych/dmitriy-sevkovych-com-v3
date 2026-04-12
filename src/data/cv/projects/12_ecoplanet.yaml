@@ -8,11 +8,12 @@ location: "fully remote"
 description: "Helping a VC-funded EnergyTech startup scale out to unicorn valuation."
 responsibilities:
     [
-        "Reimplemented talk-to-your-data AI assistant (~7x performance improvement).",
-        "Implemented multi-agent AI system for report generation.", 
-        "Implemented multi-agent AI system for insight detection and generation of energy saving measures.",
+        "Reimplemented customer AI assistant (~7x performance improvement).",
+        "Implemented a report generation multi-agent AI system.", 
+        "Implemented an insight and anomaly detection pipeline.",
+        "Implemented an AI-enhanced system for deriving energy saving measures.",
+        "Implemented multilinear regression analysis feature.",
         "Consulted on overarching architecture topics.",
-        "Delivered scalable, cloud-native applications.",
         "Introduced team collaboration best-practices.",
     ]
 techstack:

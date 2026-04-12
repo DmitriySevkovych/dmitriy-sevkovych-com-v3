@@ -2,28 +2,30 @@
 date_from: "2024-09-01"
 date_until: "ongoing"
 client: "orto GmbH"
-title: "Frontend & 3D Engineer"
+title: "Consultant & 3D-Engineer"
 capacity: "part-time"
 location: "fully remote"
-description: "Building an 3D tool for architects to work with Lidar pointclouds and photographic data."
+description: "Building an 3D collaboration platform for architects (pointclouds, documents, photographic data)."
 responsibilities:
     [
-        "Implement 3D panorama tours.",
-        "Implement features for manipulating pointclouds.",
-        "Implement frontend designs and features.",
-        "Automate data preparation processes.",
-        "Deploy and run the application.",
+        "Ongoing consulting on architecture and infrastructure topics.",
+        "Ongoing consulting AI topics.",
+        "Implemented 3D panorama tours.",
+        "Implemented features for manipulating pointclouds.",
+        "Implemented frontend designs and features.",
+        "Automated data preparation processes.",
+        "Introduced team collaboration best-practices.",
     ]
 techstack:
     [
         { image: "icon_react", caption: "React.js" },
         { image: "icon_threejs", caption: "Three.js" },
         { image: "icon_typescript_bg", caption: "TypeScript" },
-        { image: "icon_drupal", caption: "Drupal CMS" },
         { image: "icon_python", caption: "Python" },
         { image: "icon_bash", caption: "Bash" },
+        { image: "icon_drupal", caption: "Drupal CMS" },
         { image: "icon_apache", caption: "Apache2" },
-        { image: "icon_linux-containers", caption: "Linux LXD" },
+        { image: "icon_docker", caption: "Docker" },
     ]
 images:
     [
